@@ -1,0 +1,753 @@
+{
+  "meta": {
+    "title": "NB Brokerage & Supply Services — Matériaux de construction d'Égypte vers l'Afrique",
+    "description": "Fourniture B2B de matériaux de construction depuis l'Égypte pour importateurs, distributeurs et entrepreneurs en Afrique. Ciment, sable, marbre, clinker et sable siliceux. Demandez un devis."
+  },
+  "brand": {
+    "name": "Brokerage & Supply Services",
+    "by": "Par Salma Al-Tawil",
+    "home": "NB Brokerage & Supply Services — accueil"
+  },
+  "nav": {
+    "products": "Produits",
+    "why": "Pourquoi nous",
+    "export": "Export",
+    "process": "Comment ça marche",
+    "about": "À propos",
+    "contact": "Contact",
+    "requestQuote": "Demander un devis",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Changer de langue",
+    "primary": "Principal",
+    "mobile": "Mobile",
+    "whatsapp": "WhatsApp commercial"
+  },
+  "hero": {
+    "eyebrow": "Égypte → marchés africains · Fourniture B2B de matériaux de construction",
+    "line1": "Des matériaux de",
+    "line2": "construction fiables.",
+    "accent": "Livrés au-delà des frontières.",
+    "body": "Nous mettons en relation les entreprises de toute l'Afrique avec un approvisionnement fiable en matériaux de construction depuis l'Égypte — grâce à un sourcing sûr, une exécution à grande échelle et un accompagnement commercial dédié.",
+    "explore": "Découvrir les produits",
+    "carousel": "Photos",
+    "prev": "Photo précédente",
+    "next": "Photo suivante",
+    "photoAlt": "Porte-conteneurs à quai sous des portiques dans un terminal portuaire au coucher du soleil",
+    "slide2": "Photo — stocks de matériaux en vrac sur le parc",
+    "slide3": "Photo — chargement au port d'Al-Arish",
+    "facts": {
+      "origin": "Origine",
+      "originValue": "Égypte",
+      "port": "Port de chargement",
+      "portValue": "Port d'Al-Arish",
+      "modes": "Modes d'expédition",
+      "modesValue": "[Vrac / Conteneur / Terrestre]",
+      "scale": "Volume de commande",
+      "scaleValue": "Commande minimum dès 1 tonne"
+    }
+  },
+  "products": {
+    "eyebrow": "Produits",
+    "title": "Ce que nous fournissons",
+    "intro": "Sélectionnez une catégorie de matériau pour consulter les spécifications, qualités, conditionnements et disponibilités. Les prix sont établis sur demande, selon la quantité, la spécification et la destination.",
+    "listLabel": "Catégories de produits",
+    "cantFind": "Vous ne trouvez pas votre matériau ? Envoyez-nous votre spécification",
+    "requestQuote": "Demander un devis",
+    "explore": "Voir le produit",
+    "viewSpecs": "Voir les spécifications",
+    "items": {
+      "cement": {
+        "name": "Ciment",
+        "short": "Ciment Portland pour la construction structurelle, les infrastructures et le bâtiment en général.",
+        "photo": "Image — gros plan ciment",
+        "detail": {
+          "overview": "[Description détaillée du ciment fourni — norme de production, contrôles qualité, stockage et manutention avant expédition.]",
+          "facts": {
+            "moq": "Une tonne",
+            "capacity": "1 000 t / mois",
+            "lead": "Une semaine",
+            "packaging": "Vrac / Big-bags / Sacs"
+          },
+          "specs": [
+            [
+              "Résistance à la compression (28 jours)",
+              "[Valeur] MPa",
+              "[Norme]"
+            ],
+            [
+              "Temps de début de prise",
+              "Minimum 45 min",
+              "[Norme]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Qualité A]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Qualité B]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Type C]",
+              "[Courte description]",
+              "[Usage]"
+            ]
+          ],
+          "packaging": [
+            [
+              "Vrac",
+              "[Méthode de chargement et mode d'expédition]"
+            ],
+            [
+              "Big-bags (FIBC)",
+              "[Quantité par conteneur]"
+            ],
+            [
+              "Sacs — [XX] kg",
+              "[Palettisé / quantité par conteneur]"
+            ]
+          ],
+          "applications": [
+            "Béton pour bâtiments et infrastructures",
+            "Produits préfabriqués",
+            "Mortier et enduits"
+          ],
+          "certs": [
+            [
+              "[Certificat / norme]",
+              "[Organisme] — le cas échéant"
+            ],
+            [
+              "[Rapport d'essai / CoA]",
+              "[Disponible sur demande — à confirmer]"
+            ]
+          ]
+        }
+      },
+      "sand": {
+        "name": "Sable",
+        "short": "[Courte description du sable — qualités fournies et acheteurs types.]",
+        "photo": "Image — gros plan sable",
+        "detail": {
+          "overview": "[Description détaillée — composition ou procédé de production, contrôles qualité, stockage et manutention avant expédition.]",
+          "facts": {
+            "moq": "[XX] tonnes",
+            "capacity": "[XX 000] t / mois",
+            "lead": "[X–X] semaines",
+            "packaging": "[Vrac / Sacs]"
+          },
+          "specs": [
+            [
+              "[Paramètre 01]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 02]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 03]",
+              "[Valeur]",
+              "[Norme]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Qualité A]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Qualité B]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Type C]",
+              "[Courte description]",
+              "[Usage]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Vrac]",
+              "[Méthode de chargement et mode d'expédition]"
+            ],
+            [
+              "[Sacs — XX kg]",
+              "[Palettisé / quantité par conteneur]"
+            ],
+            [
+              "[Big-bags — X t]",
+              "[Quantité par conteneur]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificat / norme]",
+              "[Organisme] — le cas échéant"
+            ],
+            [
+              "[Rapport d'essai / CoA]",
+              "[Disponible sur demande — à confirmer]"
+            ]
+          ]
+        }
+      },
+      "marble": {
+        "name": "Marbre",
+        "short": "[Courte description du marbre — qualités fournies et acheteurs types.]",
+        "photo": "Image — gros plan marbre",
+        "detail": {
+          "overview": "[Description détaillée — composition ou procédé de production, contrôles qualité, stockage et manutention avant expédition.]",
+          "facts": {
+            "moq": "[XX] tonnes",
+            "capacity": "[XX 000] t / mois",
+            "lead": "[X–X] semaines",
+            "packaging": "[Vrac / Sacs]"
+          },
+          "specs": [
+            [
+              "[Paramètre 01]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 02]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 03]",
+              "[Valeur]",
+              "[Norme]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Qualité A]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Qualité B]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Type C]",
+              "[Courte description]",
+              "[Usage]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Vrac]",
+              "[Méthode de chargement et mode d'expédition]"
+            ],
+            [
+              "[Sacs — XX kg]",
+              "[Palettisé / quantité par conteneur]"
+            ],
+            [
+              "[Big-bags — X t]",
+              "[Quantité par conteneur]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificat / norme]",
+              "[Organisme] — le cas échéant"
+            ],
+            [
+              "[Rapport d'essai / CoA]",
+              "[Disponible sur demande — à confirmer]"
+            ]
+          ]
+        }
+      },
+      "clinker": {
+        "name": "Clinker",
+        "short": "[Courte description du clinker — qualités fournies et acheteurs types.]",
+        "photo": "Image — gros plan clinker",
+        "detail": {
+          "overview": "[Description détaillée — composition ou procédé de production, contrôles qualité, stockage et manutention avant expédition.]",
+          "facts": {
+            "moq": "[XX] tonnes",
+            "capacity": "[XX 000] t / mois",
+            "lead": "[X–X] semaines",
+            "packaging": "[Vrac / Sacs]"
+          },
+          "specs": [
+            [
+              "[Paramètre 01]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 02]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 03]",
+              "[Valeur]",
+              "[Norme]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Qualité A]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Qualité B]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Type C]",
+              "[Courte description]",
+              "[Usage]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Vrac]",
+              "[Méthode de chargement et mode d'expédition]"
+            ],
+            [
+              "[Sacs — XX kg]",
+              "[Palettisé / quantité par conteneur]"
+            ],
+            [
+              "[Big-bags — X t]",
+              "[Quantité par conteneur]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificat / norme]",
+              "[Organisme] — le cas échéant"
+            ],
+            [
+              "[Rapport d'essai / CoA]",
+              "[Disponible sur demande — à confirmer]"
+            ]
+          ]
+        }
+      },
+      "silica-sand": {
+        "name": "Sable siliceux blanc vitreux",
+        "short": "[Courte description du sable siliceux blanc vitreux — qualités fournies et acheteurs types.]",
+        "photo": "Image — gros plan sable siliceux",
+        "detail": {
+          "overview": "[Description détaillée — composition ou procédé de production, contrôles qualité, stockage et manutention avant expédition.]",
+          "facts": {
+            "moq": "[XX] tonnes",
+            "capacity": "[XX 000] t / mois",
+            "lead": "[X–X] semaines",
+            "packaging": "[Vrac / Sacs]"
+          },
+          "specs": [
+            [
+              "[Paramètre 01]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 02]",
+              "[Valeur]",
+              "[Norme]"
+            ],
+            [
+              "[Paramètre 03]",
+              "[Valeur]",
+              "[Norme]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Qualité A]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Qualité B]",
+              "[Courte description]",
+              "[Usage]"
+            ],
+            [
+              "[Type C]",
+              "[Courte description]",
+              "[Usage]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Vrac]",
+              "[Méthode de chargement et mode d'expédition]"
+            ],
+            [
+              "[Sacs — XX kg]",
+              "[Palettisé / quantité par conteneur]"
+            ],
+            [
+              "[Big-bags — X t]",
+              "[Quantité par conteneur]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificat / norme]",
+              "[Organisme] — le cas échéant"
+            ],
+            [
+              "[Rapport d'essai / CoA]",
+              "[Disponible sur demande — à confirmer]"
+            ]
+          ]
+        }
+      }
+    },
+    "origin": "Égypte"
+  },
+  "why": {
+    "eyebrow": "Pourquoi nous ?",
+    "title": "Un partenaire d'approvisionnement pour les grandes commandes transfrontalières.",
+    "intro": "Ce qu'un acheteur international peut attendre en s'approvisionnant en matériaux de construction auprès de nous.",
+    "items": [
+      {
+        "title": "Approvisionnement fiable",
+        "body": "Un sourcing régulier et une exécution fiable, pour que vos chantiers et vos stocks ne restent pas en attente."
+      },
+      {
+        "title": "Conçu pour les volumes",
+        "body": "La capacité de traiter des besoins B2B importants — d'une commande ponctuelle en vrac à des contrats d'approvisionnement récurrents."
+      },
+      {
+        "title": "Portée internationale",
+        "body": "Nous accompagnons les entreprises au-delà du marché égyptien, avec la gestion de l'export intégrée à notre façon de travailler."
+      },
+      {
+        "title": "Accompagnement commercial",
+        "body": "Une équipe dédiée qui vous suit de la première demande jusqu'au contrat, à l'expédition et à la livraison."
+      },
+      {
+        "title": "Qualité et conformité",
+        "body": "Documentation professionnelle, spécifications techniques et certifications le cas échéant."
+      }
+    ]
+  },
+  "global": {
+    "eyebrow": "Export / Approvisionnement international",
+    "title": "De l'Égypte vers les marchés africains.",
+    "body": "La position de l'Égypte, sur la Méditerranée et la mer Rouge, donne aux acheteurs de tout le continent un accès à l'approvisionnement par voie maritime et terrestre. Indiquez-nous votre destination et notre équipe vous conseillera sur l'itinéraire.",
+    "current": "Marchés que nous desservons",
+    "countries": {
+      "senegal": "Sénégal",
+      "mauritania": "Mauritanie",
+      "mali": "Mali",
+      "ivory": "Côte d'Ivoire",
+      "guinea": "Guinée"
+    },
+    "rows": [
+      {
+        "k": "Ports de chargement",
+        "v": "Port d'Al-Arish"
+      },
+      {
+        "k": "Modes d'expédition",
+        "v": "[ex. vraquier, conteneur, fret terrestre — à confirmer]"
+      },
+      {
+        "k": "Conditions commerciales",
+        "v": "[Incoterms proposés — à confirmer]"
+      },
+      {
+        "k": "Documents d'export",
+        "v": "[Documents fournis avec chaque expédition — à confirmer]"
+      }
+    ],
+    "origin": "Origine",
+    "originValue": "Égypte",
+    "legendOrigin": "Origine",
+    "legendDest": "Destinations d'expédition",
+    "mapAlt": "Carte de l'Afrique montrant les routes d'expédition de l'Égypte vers la Mauritanie, le Sénégal, le Mali, la Guinée et la Côte d'Ivoire"
+  },
+  "process": {
+    "eyebrow": "Comment ça marche ?",
+    "title": "De la demande à la livraison.",
+    "intro": "Ce site engage la conversation. Les prix, contrats, paiements et la logistique sont convenus directement avec notre équipe commerciale.",
+    "steps": [
+      {
+        "title": "Dites-nous ce dont vous avez besoin",
+        "body": "Indiquez le matériau, la quantité, la destination et vos exigences techniques."
+      },
+      {
+        "title": "Notre équipe étudie votre demande",
+        "body": "Le service commercial évalue la disponibilité, la spécification et les besoins d'expédition."
+      },
+      {
+        "title": "Recevez une proposition commerciale",
+        "body": "Nous discutons directement avec vous des prix, spécifications, de la logistique et des conditions."
+      },
+      {
+        "title": "Nous nous occupons du reste",
+        "body": "Contrat, paiement, logistique et exécution suivent notre processus commercial."
+      }
+    ],
+    "ctaText": "Prêt à commencer ? L'étape 01 prend environ deux minutes.",
+    "cta": "Parlons de vos besoins"
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "New Brokers",
+    "story": "[Histoire de l'entreprise — deux ou trois phrases sur ses débuts, sa spécialité et sa raison d'être.]",
+    "facts": [
+      {
+        "k": "Fondée",
+        "v": "[Année]"
+      },
+      {
+        "k": "Siège",
+        "v": "Sinaï, Égypte"
+      },
+      {
+        "k": "Spécialité",
+        "v": "Fournisseur de matériaux de construction"
+      },
+      {
+        "k": "Marchés actuels",
+        "v": "Mauritanie, Guinée, Sénégal, Mali, Côte d'Ivoire"
+      }
+    ],
+    "philosophyTitle": "Notre philosophie d'approvisionnement",
+    "philosophy": "[Une ou deux phrases sur l'approche du sourcing, de la qualité et de la fiabilité.]",
+    "visionTitle": "Nos ambitions",
+    "vision": "[Vision de l'expansion internationale — quels marchés, et pourquoi maintenant.]",
+    "carousel": "Photos de l'entreprise",
+    "prev": "Photo précédente",
+    "next": "Photo suivante",
+    "show": "Afficher la photo {n} : {title}",
+    "slides": [
+      {
+        "title": "Installations",
+        "desc": "Photo — entrepôt ou site, extérieur ou intérieur"
+      },
+      {
+        "title": "Parc de stockage",
+        "desc": "Photo — stocks de matériaux, plan large"
+      },
+      {
+        "title": "Chargement",
+        "desc": "Photo — camions ou navire en chargement au port"
+      },
+      {
+        "title": "Contrôle qualité",
+        "desc": "Photo — échantillonnage, inspection ou essais en laboratoire"
+      }
+    ],
+    "leadership": "Direction",
+    "quote": "« Citation de la fondatrice — à fournir dans ses propres mots. »",
+    "bio": "Courte biographie — parcours, années dans le secteur des matériaux de construction ou du négoce, et expérience la plus utile aux acheteurs internationaux.",
+    "portrait": "Portrait — fondatrice / PDG",
+    "founderName": "Salma Al-Tawil",
+    "founderRole": "Fondatrice et PDG"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "intro": "Indiquez-nous le matériau, la quantité et la destination. Notre équipe commerciale étudie chaque demande et répond avec la disponibilité, les spécifications et une proposition commerciale — généralement sous [XX heures ouvrées].",
+    "formLabel": "Demander un devis",
+    "groups": {
+      "requirement": "Votre besoin",
+      "company": "Société et contact",
+      "details": "Détails"
+    },
+    "fields": {
+      "material": "Matériau",
+      "materialOther": "Autre — à décrire ci-dessous",
+      "grade": "Qualité / spécification",
+      "gradePh": "ex. CEM I 42.5N, granulométrie, finition",
+      "quantity": "Quantité requise",
+      "quantityPh": "ex. 5 000",
+      "unit": "Unité",
+      "country": "Pays de destination",
+      "countryPh": "ex. Sénégal",
+      "port": "Port / ville de destination",
+      "portPh": "ex. Port de Dakar",
+      "orderType": "Type de commande",
+      "requiredBy": "Date souhaitée",
+      "requiredByPh": "Mois / année",
+      "company": "Nom de la société",
+      "name": "Votre nom",
+      "email": "E-mail professionnel",
+      "emailPh": "nom@societe.com",
+      "phone": "Téléphone / WhatsApp",
+      "phonePh": "+ indicatif pays",
+      "notes": "Exigences supplémentaires",
+      "notesPh": "Spécifications, conditionnement, calendrier de livraison, Incoterms, besoins d'inspection ou de documents…",
+      "file": "Joindre une spécification ou un document (facultatif)",
+      "fileHint": "PDF, DOC, XLS · 10 Mo max"
+    },
+    "units": {
+      "t": "Tonnes métriques",
+      "m3": "Mètres cubes (m³)",
+      "m2": "Mètres carrés (m²)",
+      "bags": "Sacs",
+      "c20": "Conteneurs (20 pieds)",
+      "c40": "Conteneurs (40 pieds)"
+    },
+    "orderTypes": {
+      "once": "Commande ponctuelle",
+      "recurring": "Approvisionnement récurrent",
+      "unsure": "Pas encore décidé"
+    },
+    "consent": "En envoyant ce formulaire, vous acceptez d'être contacté par notre équipe commerciale au sujet de cette demande.",
+    "privacy": "Politique de confidentialité",
+    "submit": "Demander un devis",
+    "sending": "Envoi…",
+    "required": "Obligatoire",
+    "errors": {
+      "generic": "Une erreur s'est produite. Veuillez réessayer, ou nous contacter par e-mail ou WhatsApp.",
+      "fileTooLarge": "Le fichier dépasse 10 Mo.",
+      "invalid": "Veuillez vérifier les champs signalés."
+    },
+    "success": {
+      "title": "Demande reçue.",
+      "body": "Merci. Notre équipe commerciale va étudier vos besoins — matériau, quantité et destination — et vous contactera sous [XX heures ouvrées] pour discuter des spécifications, des prix et de la logistique.",
+      "reference": "Référence",
+      "sentTo": "Confirmation envoyée à",
+      "next": "Prochaine étape",
+      "nextValue": "Étude par l'équipe commerciale",
+      "back": "Retour aux produits",
+      "again": "Envoyer une autre demande"
+    },
+    "side": {
+      "nextTitle": "Et ensuite ?",
+      "steps": [
+        {
+          "title": "Vous envoyez votre demande",
+          "body": "Matériau, quantité, destination."
+        },
+        {
+          "title": "Notre équipe l'étudie",
+          "body": "Disponibilité, spécifications et itinéraire."
+        },
+        {
+          "title": "Vous recevez une proposition",
+          "body": "Prix, logistique et conditions."
+        },
+        {
+          "title": "Nous nous occupons du reste",
+          "body": "Contrat, paiement, expédition."
+        }
+      ],
+      "noPrices": "Aucun prix n'est affiché en ligne — chaque devis tient compte de votre volume, de la spécification et de la destination.",
+      "talk": "Vous préférez parler ?",
+      "salesEmail": "E-mail commercial",
+      "phone": "Téléphone",
+      "whatsapp": "WhatsApp",
+      "whatsappCta": "WhatsApp commercial"
+    }
+  },
+  "footer": {
+    "description": "[Description de l'entreprise en une ligne — fourniture de matériaux de construction depuis l'Égypte pour les entreprises de toute l'Afrique.]",
+    "company": "Entreprise",
+    "getInTouch": "Nous contacter",
+    "office": "Bureau",
+    "address1": "[Adresse]",
+    "address2": "[Ville], Égypte",
+    "rights": "© {year} NB Brokerage & Supply Services. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique de cookies",
+    "globalSupply": "Approvisionnement international"
+  },
+  "productsPage": {
+    "metaTitle": "Produits — NB Brokerage & Supply Services",
+    "home": "Accueil",
+    "breadcrumb": "Fil d'Ariane",
+    "title": "Ce que nous fournissons",
+    "intro": "Catégories de matériaux disponibles pour des approvisionnements en grands volumes. Spécifications, qualités et disponibilités sont confirmées à chaque demande par notre équipe commerciale.",
+    "ctaEyebrow": "Besoins spécifiques",
+    "ctaTitle": "Vous ne trouvez pas votre matériau ?",
+    "ctaAccent": "Envoyez-nous votre spécification.",
+    "talk": "Parler au service commercial"
+  },
+  "productPage": {
+    "category": "Catégorie {n}",
+    "datasheet": "Fiche technique",
+    "gallery": {
+      "main": "Image — gros plan macro du matériau, lumière rasante",
+      "packaging": "Conditionnement",
+      "stockyard": "Parc de stockage",
+      "loading": "Chargement"
+    },
+    "facts": {
+      "moq": "Commande minimum",
+      "capacity": "Capacité d'approvisionnement",
+      "origin": "Origine",
+      "lead": "Délai",
+      "packaging": "Conditionnement"
+    },
+    "onThisPage": "Sur cette page",
+    "overview": "Présentation du produit",
+    "specs": "Spécifications techniques",
+    "specsHead": [
+      "Paramètre",
+      "Valeur / plage",
+      "Norme / méthode d'essai"
+    ],
+    "specsNote": "Des spécifications sur mesure peuvent être disponibles — précisez-les dans votre demande.",
+    "grades": "Qualités / types disponibles",
+    "gradesHead": [
+      "Qualité / type",
+      "Description",
+      "Usage type"
+    ],
+    "packaging": "Conditionnement et approvisionnement",
+    "applications": "Applications",
+    "certs": "Certifications",
+    "download": "Télécharger",
+    "datasheetTitle": "Fiche technique — {name}",
+    "datasheetMeta": "[Révision / date] · [Taille du fichier]",
+    "sideTitle": "Vous recherchez ce matériau ?",
+    "sideBody": "Obtenez une proposition commerciale selon votre quantité et votre destination.",
+    "talk": "Parler au service commercial",
+    "rfqTitle": "Est-ce le matériau qu'il vous faut ?",
+    "rfqBody": "Envoyez-nous vos besoins : notre équipe commerciale reviendra vers vous avec les spécifications, la disponibilité et une proposition commerciale.",
+    "rfqCta": "Envoyer vos besoins"
+  },
+  "mobileCta": {
+    "quote": "Demander un devis"
+  }
+}

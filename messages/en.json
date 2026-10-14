@@ -1,0 +1,753 @@
+{
+  "meta": {
+    "title": "NB Brokerage & Supply Services — Building materials from Egypt to Africa",
+    "description": "B2B building-material supply from Egypt for importers, distributors and contractors across Africa. Cement, sand, marble, clinker and silica sand. Request a quote."
+  },
+  "brand": {
+    "name": "Brokerage & Supply Services",
+    "by": "By Salma Al-Tawil",
+    "home": "NB Brokerage & Supply Services — home"
+  },
+  "nav": {
+    "products": "Products",
+    "why": "Why Us",
+    "export": "Export",
+    "process": "How it works",
+    "about": "About",
+    "contact": "Contact us",
+    "requestQuote": "Request a Quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Change language",
+    "primary": "Primary",
+    "mobile": "Mobile",
+    "whatsapp": "WhatsApp sales"
+  },
+  "hero": {
+    "eyebrow": "Egypt → African markets · B2B building-material supply",
+    "line1": "Reliable building",
+    "line2": "materials.",
+    "accent": "Supplied beyond borders.",
+    "body": "We connect businesses across Africa with dependable building-material supply from Egypt — backed by reliable sourcing, large-scale fulfillment and dedicated commercial support.",
+    "explore": "Explore Products",
+    "carousel": "Hero photos",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "photoAlt": "Container ship docked under gantry cranes at a port terminal at sunset",
+    "slide2": "Photo — bulk material stockpiles at the yard",
+    "slide3": "Photo — loading at Al-Arish port",
+    "facts": {
+      "origin": "Origin",
+      "originValue": "Egypt",
+      "port": "Port of loading",
+      "portValue": "Al-Arish port",
+      "modes": "Shipment modes",
+      "modesValue": "[Bulk / Container / Land]",
+      "scale": "Order scale",
+      "scaleValue": "Min. order starts from 1 ton"
+    }
+  },
+  "products": {
+    "eyebrow": "Products",
+    "title": "What We Supply",
+    "intro": "Select a material category to review specifications, grades, packaging and availability. Pricing is quoted per request, based on quantity, specification and destination.",
+    "listLabel": "Product categories",
+    "cantFind": "Can't find your material? Send us your specification",
+    "requestQuote": "Request a Quote",
+    "explore": "Explore Product",
+    "viewSpecs": "View specifications",
+    "items": {
+      "cement": {
+        "name": "Cement",
+        "short": "Portland cement for structural, infrastructure and general construction.",
+        "photo": "Image — cement close-up",
+        "detail": {
+          "overview": "[Detailed description of the cement supplied — production standard, quality controls, and how it is stored and handled before shipment.]",
+          "facts": {
+            "moq": "One ton",
+            "capacity": "1,000 t / month",
+            "lead": "One week",
+            "packaging": "Bulk / FIBC / Bags"
+          },
+          "specs": [
+            [
+              "Compressive strength (28-day)",
+              "[Value] MPa",
+              "[Standard]"
+            ],
+            [
+              "Initial setting time",
+              "Minimum 45 min",
+              "[Standard]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Grade A]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Grade B]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Type C]",
+              "[Short description]",
+              "[Use]"
+            ]
+          ],
+          "packaging": [
+            [
+              "Bulk",
+              "[Loading method and shipment mode]"
+            ],
+            [
+              "FIBC (big bags)",
+              "[Per container quantity]"
+            ],
+            [
+              "Bags — [XX] kg",
+              "[Palletised / per container quantity]"
+            ]
+          ],
+          "applications": [
+            "Concrete for buildings and infrastructure",
+            "Precast products",
+            "Mortar and plastering"
+          ],
+          "certs": [
+            [
+              "[Certificate / standard]",
+              "[Issuing body] — if applicable"
+            ],
+            [
+              "[Test report / CoA]",
+              "[Available on request — confirm]"
+            ]
+          ]
+        }
+      },
+      "sand": {
+        "name": "Sand",
+        "short": "[Short description of sand — grades supplied, and who typically buys it.]",
+        "photo": "Image — sand close-up",
+        "detail": {
+          "overview": "[Detailed description of sand — composition or production method, quality controls, storage and handling before shipment.]",
+          "facts": {
+            "moq": "[XX] tons",
+            "capacity": "[XX,000] t / month",
+            "lead": "[X–X] weeks",
+            "packaging": "[Bulk / Bags]"
+          },
+          "specs": [
+            [
+              "[Parameter 01]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 02]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 03]",
+              "[Value]",
+              "[Standard]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Grade A]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Grade B]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Type C]",
+              "[Short description]",
+              "[Use]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Bulk]",
+              "[Loading method and shipment mode]"
+            ],
+            [
+              "[Bags — XX kg]",
+              "[Palletised / per container quantity]"
+            ],
+            [
+              "[Big bags — X t]",
+              "[Per container quantity]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificate / standard]",
+              "[Issuing body] — if applicable"
+            ],
+            [
+              "[Test report / CoA]",
+              "[Available on request — confirm]"
+            ]
+          ]
+        }
+      },
+      "marble": {
+        "name": "Marble",
+        "short": "[Short description of marble — grades supplied, and who typically buys it.]",
+        "photo": "Image — marble close-up",
+        "detail": {
+          "overview": "[Detailed description of marble — composition or production method, quality controls, storage and handling before shipment.]",
+          "facts": {
+            "moq": "[XX] tons",
+            "capacity": "[XX,000] t / month",
+            "lead": "[X–X] weeks",
+            "packaging": "[Bulk / Bags]"
+          },
+          "specs": [
+            [
+              "[Parameter 01]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 02]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 03]",
+              "[Value]",
+              "[Standard]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Grade A]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Grade B]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Type C]",
+              "[Short description]",
+              "[Use]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Bulk]",
+              "[Loading method and shipment mode]"
+            ],
+            [
+              "[Bags — XX kg]",
+              "[Palletised / per container quantity]"
+            ],
+            [
+              "[Big bags — X t]",
+              "[Per container quantity]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificate / standard]",
+              "[Issuing body] — if applicable"
+            ],
+            [
+              "[Test report / CoA]",
+              "[Available on request — confirm]"
+            ]
+          ]
+        }
+      },
+      "clinker": {
+        "name": "Clinker",
+        "short": "[Short description of clinker — grades supplied, and who typically buys it.]",
+        "photo": "Image — clinker close-up",
+        "detail": {
+          "overview": "[Detailed description of clinker — composition or production method, quality controls, storage and handling before shipment.]",
+          "facts": {
+            "moq": "[XX] tons",
+            "capacity": "[XX,000] t / month",
+            "lead": "[X–X] weeks",
+            "packaging": "[Bulk / Bags]"
+          },
+          "specs": [
+            [
+              "[Parameter 01]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 02]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 03]",
+              "[Value]",
+              "[Standard]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Grade A]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Grade B]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Type C]",
+              "[Short description]",
+              "[Use]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Bulk]",
+              "[Loading method and shipment mode]"
+            ],
+            [
+              "[Bags — XX kg]",
+              "[Palletised / per container quantity]"
+            ],
+            [
+              "[Big bags — X t]",
+              "[Per container quantity]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificate / standard]",
+              "[Issuing body] — if applicable"
+            ],
+            [
+              "[Test report / CoA]",
+              "[Available on request — confirm]"
+            ]
+          ]
+        }
+      },
+      "silica-sand": {
+        "name": "White glassy silica sand",
+        "short": "[Short description of white glassy silica sand — grades supplied, and who typically buys it.]",
+        "photo": "Image — silica sand close-up",
+        "detail": {
+          "overview": "[Detailed description of white glassy silica sand — composition or production method, quality controls, storage and handling before shipment.]",
+          "facts": {
+            "moq": "[XX] tons",
+            "capacity": "[XX,000] t / month",
+            "lead": "[X–X] weeks",
+            "packaging": "[Bulk / Bags]"
+          },
+          "specs": [
+            [
+              "[Parameter 01]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 02]",
+              "[Value]",
+              "[Standard]"
+            ],
+            [
+              "[Parameter 03]",
+              "[Value]",
+              "[Standard]"
+            ]
+          ],
+          "grades": [
+            [
+              "[Grade A]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Grade B]",
+              "[Short description]",
+              "[Use]"
+            ],
+            [
+              "[Type C]",
+              "[Short description]",
+              "[Use]"
+            ]
+          ],
+          "packaging": [
+            [
+              "[Bulk]",
+              "[Loading method and shipment mode]"
+            ],
+            [
+              "[Bags — XX kg]",
+              "[Palletised / per container quantity]"
+            ],
+            [
+              "[Big bags — X t]",
+              "[Per container quantity]"
+            ]
+          ],
+          "applications": [
+            "[Application 01]",
+            "[Application 02]",
+            "[Application 03]"
+          ],
+          "certs": [
+            [
+              "[Certificate / standard]",
+              "[Issuing body] — if applicable"
+            ],
+            [
+              "[Test report / CoA]",
+              "[Available on request — confirm]"
+            ]
+          ]
+        }
+      }
+    },
+    "origin": "Egypt"
+  },
+  "why": {
+    "eyebrow": "Why Us?",
+    "title": "A supply partner for large, cross-border orders.",
+    "intro": "What an international buyer should expect when sourcing building materials through us.",
+    "items": [
+      {
+        "title": "Reliable Supply",
+        "body": "Consistent sourcing and dependable fulfillment, so your projects and stock levels are not left waiting."
+      },
+      {
+        "title": "Built for Scale",
+        "body": "Capability to handle large-volume B2B requirements — from a single bulk order to recurring supply agreements."
+      },
+      {
+        "title": "International Reach",
+        "body": "Supporting businesses beyond the Egyptian market, with export handling built into how we work."
+      },
+      {
+        "title": "Commercial Support",
+        "body": "A dedicated team that works with you from first inquiry through contract, shipment and delivery."
+      },
+      {
+        "title": "Quality & Compliance",
+        "body": "Professional documentation, technical specifications and certifications where applicable."
+      }
+    ]
+  },
+  "global": {
+    "eyebrow": "Export / Global Supply",
+    "title": "From Egypt to African markets.",
+    "body": "Egypt's position on both the Mediterranean and the Red Sea gives buyers across the continent access to supply by sea and land. Tell us your destination and our team will advise on the route.",
+    "current": "Markets we currently serve",
+    "countries": {
+      "senegal": "Senegal",
+      "mauritania": "Mauritania",
+      "mali": "Mali",
+      "ivory": "Côte d'Ivoire",
+      "guinea": "Guinea"
+    },
+    "rows": [
+      {
+        "k": "Ports of loading",
+        "v": "Al-Arish port"
+      },
+      {
+        "k": "Shipment modes",
+        "v": "[e.g. bulk vessel, container, land freight — confirm]"
+      },
+      {
+        "k": "Trade terms",
+        "v": "[Incoterms offered — confirm]"
+      },
+      {
+        "k": "Export documents",
+        "v": "[Documents provided with each shipment — confirm]"
+      }
+    ],
+    "origin": "Origin",
+    "originValue": "Egypt",
+    "legendOrigin": "Origin",
+    "legendDest": "Shipping destinations",
+    "mapAlt": "Map of Africa showing shipping routes from Egypt to Mauritania, Senegal, Mali, Guinea and Côte d'Ivoire"
+  },
+  "process": {
+    "eyebrow": "How it works?",
+    "title": "From inquiry to delivery.",
+    "intro": "This website starts the conversation. Pricing, contracts, payment and logistics are agreed directly with our commercial team.",
+    "steps": [
+      {
+        "title": "Tell us what you need",
+        "body": "Submit the material, quantity, destination and any technical requirements."
+      },
+      {
+        "title": "Our team reviews your request",
+        "body": "Sales evaluates availability, specification and shipping requirements."
+      },
+      {
+        "title": "Receive a commercial proposal",
+        "body": "We discuss pricing, specifications, logistics and terms with you directly."
+      },
+      {
+        "title": "We handle the rest",
+        "body": "Contracting, payment, logistics and fulfillment run through our commercial process."
+      }
+    ],
+    "ctaText": "Ready to start? Step 01 takes about two minutes.",
+    "cta": "Discuss Your Requirements"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "New Brokers",
+    "story": "[Company story — two or three sentences on how the company started, what it specialises in and why it exists.]",
+    "facts": [
+      {
+        "k": "Founded",
+        "v": "[Year]"
+      },
+      {
+        "k": "Headquarters",
+        "v": "Sinai, Egypt"
+      },
+      {
+        "k": "Specialisation",
+        "v": "Building materials supplier"
+      },
+      {
+        "k": "Existing markets",
+        "v": "Mauritania, Guinea, Senegal, Mali, Ivory Coast"
+      }
+    ],
+    "philosophyTitle": "Supply philosophy",
+    "philosophy": "[One or two sentences on how the company approaches sourcing, quality and reliability.]",
+    "visionTitle": "Where we're going",
+    "vision": "[Vision for international expansion — which markets, and why now.]",
+    "carousel": "Company photos",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "show": "Show photo {n}: {title}",
+    "slides": [
+      {
+        "title": "Facility",
+        "desc": "Photo — warehouse or facility, exterior or interior"
+      },
+      {
+        "title": "Stockyard",
+        "desc": "Photo — material stockpiles, wide shot"
+      },
+      {
+        "title": "Loading",
+        "desc": "Photo — trucks or vessel loading at port"
+      },
+      {
+        "title": "Quality control",
+        "desc": "Photo — sampling, inspection or lab testing"
+      }
+    ],
+    "leadership": "Leadership",
+    "quote": "“Founder quote — to be provided by the founder in their own words.”",
+    "bio": "Short biography — background, years in the building-materials or trading sector, and the experience most relevant to international buyers.",
+    "portrait": "Portrait — founder / CEO",
+    "founderName": "Salma Al-Tawil",
+    "founderRole": "Founder & CEO"
+  },
+  "contact": {
+    "title": "Contact us",
+    "intro": "Tell us the material, quantity and destination. Our sales team reviews every request and replies with availability, specifications and a commercial proposal — usually within [XX business hours].",
+    "formLabel": "Request a quote",
+    "groups": {
+      "requirement": "Your requirement",
+      "company": "Company & contact",
+      "details": "Details"
+    },
+    "fields": {
+      "material": "Material",
+      "materialOther": "Other — describe below",
+      "grade": "Grade / specification",
+      "gradePh": "e.g. CEM I 42.5N, mesh size, finish",
+      "quantity": "Required quantity",
+      "quantityPh": "e.g. 5,000",
+      "unit": "Unit",
+      "country": "Destination country",
+      "countryPh": "e.g. Senegal",
+      "port": "Destination port / city",
+      "portPh": "e.g. Port of Dakar",
+      "orderType": "Order type",
+      "requiredBy": "Required by",
+      "requiredByPh": "Month / year",
+      "company": "Company name",
+      "name": "Your name",
+      "email": "Business email",
+      "emailPh": "name@company.com",
+      "phone": "Phone / WhatsApp",
+      "phonePh": "+ country code",
+      "notes": "Additional requirements",
+      "notesPh": "Specifications, packaging, delivery schedule, Incoterms, inspection or documentation needs…",
+      "file": "Upload specification or document (optional)",
+      "fileHint": "PDF, DOC, XLS · max 10 MB"
+    },
+    "units": {
+      "t": "Metric tons",
+      "m3": "Cubic metres (m³)",
+      "m2": "Square metres (m²)",
+      "bags": "Bags",
+      "c20": "Containers (20ft)",
+      "c40": "Containers (40ft)"
+    },
+    "orderTypes": {
+      "once": "One-time order",
+      "recurring": "Recurring supply",
+      "unsure": "Not sure yet"
+    },
+    "consent": "By submitting, you agree to be contacted by our sales team about this request.",
+    "privacy": "Privacy policy",
+    "submit": "Request a Quote",
+    "sending": "Sending…",
+    "required": "Required",
+    "errors": {
+      "generic": "Something went wrong. Please try again, or contact us by email or WhatsApp.",
+      "fileTooLarge": "The file is larger than 10 MB.",
+      "invalid": "Please check the highlighted fields."
+    },
+    "success": {
+      "title": "Request received.",
+      "body": "Thank you. Our sales team will review your requirements — material, quantity and destination — and contact you within [XX business hours] to discuss specifications, pricing and logistics.",
+      "reference": "Reference",
+      "sentTo": "Confirmation sent to",
+      "next": "Next step",
+      "nextValue": "Review by sales team",
+      "back": "Back to Products",
+      "again": "Submit another request"
+    },
+    "side": {
+      "nextTitle": "What happens next",
+      "steps": [
+        {
+          "title": "You send your request",
+          "body": "Material, quantity, destination."
+        },
+        {
+          "title": "Our team reviews it",
+          "body": "Availability, specs and route."
+        },
+        {
+          "title": "You receive a proposal",
+          "body": "Pricing, logistics and terms."
+        },
+        {
+          "title": "We handle the rest",
+          "body": "Contract, payment, shipping."
+        }
+      ],
+      "noPrices": "No prices are shown online — every quote reflects your volume, specification and destination.",
+      "talk": "Prefer to talk?",
+      "salesEmail": "Sales email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "whatsappCta": "WhatsApp Sales"
+    }
+  },
+  "footer": {
+    "description": "[One-line company description — building-material supply from Egypt for businesses across Africa.]",
+    "company": "Company",
+    "getInTouch": "Get in touch",
+    "office": "Office",
+    "address1": "[Street address]",
+    "address2": "[City], Egypt",
+    "rights": "© {year} NB Brokerage & Supply Services. All rights reserved.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "cookies": "Cookie policy",
+    "globalSupply": "Global Supply"
+  },
+  "productsPage": {
+    "metaTitle": "Products — NB Brokerage & Supply Services",
+    "home": "Home",
+    "breadcrumb": "Breadcrumb",
+    "title": "What we supply",
+    "intro": "Material categories available for large-volume supply. Specifications, grades and availability are confirmed per request by our commercial team.",
+    "ctaEyebrow": "Custom requirements",
+    "ctaTitle": "Can't find your material?",
+    "ctaAccent": "Send us your specification.",
+    "talk": "Talk to Sales"
+  },
+  "productPage": {
+    "category": "Category {n}",
+    "datasheet": "Technical datasheet",
+    "gallery": {
+      "main": "Image — macro close-up of the material, raking light",
+      "packaging": "Packaging",
+      "stockyard": "Stockyard",
+      "loading": "Loading"
+    },
+    "facts": {
+      "moq": "Minimum order",
+      "capacity": "Supply capacity",
+      "origin": "Origin",
+      "lead": "Lead time",
+      "packaging": "Packaging"
+    },
+    "onThisPage": "On this page",
+    "overview": "Product overview",
+    "specs": "Technical specifications",
+    "specsHead": [
+      "Parameter",
+      "Value / range",
+      "Standard / test method"
+    ],
+    "specsNote": "Custom specifications may be available on request — include them in your inquiry.",
+    "grades": "Available grades / types",
+    "gradesHead": [
+      "Grade / type",
+      "Description",
+      "Typical use"
+    ],
+    "packaging": "Packaging & supply",
+    "applications": "Applications",
+    "certs": "Certifications",
+    "download": "Download",
+    "datasheetTitle": "Technical datasheet — {name}",
+    "datasheetMeta": "[Revision / date] · [File size]",
+    "sideTitle": "Sourcing this material?",
+    "sideBody": "Get a commercial proposal based on your quantity and destination.",
+    "talk": "Talk to Sales",
+    "rfqTitle": "Is this the material you need?",
+    "rfqBody": "Send us your requirements and our sales team will follow up with specifications, availability and a commercial proposal.",
+    "rfqCta": "Send your requirements"
+  },
+  "mobileCta": {
+    "quote": "Request a Quote"
+  }
+}
