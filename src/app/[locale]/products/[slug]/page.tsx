@@ -2,31 +2,37 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, routing } from "@/i18n/routing";
-import { isProductSlug, productSlugs, type ProductDetail } from "@/data/products";
+import { productImage, productSlugsOf, type ProductDetail } from "@/data/products";
+import { DEFAULT_CONTENT } from "@/lib/content";
 import { ArrowRight, Download } from "@/components/Icons";
 
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) => productSlugs.map((slug) => ({ locale, slug })));
+  // Products added later in the dashboard render on first visit (dynamicParams).
+  const slugs = productSlugsOf((DEFAULT_CONTENT.en.products as { items: unknown }).items);
+  return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
-  if (!isProductSlug(slug)) return {};
+  const tp = await getTranslations({ locale, namespace: "products" });
+  if (!productSlugsOf(tp.raw("items")).includes(slug)) return {};
   const t = await getTranslations({ locale, namespace: "products.items" });
   return { title: `${t(`${slug}.name`)} — NB Brokerage & Supply Services`, description: t(`${slug}.short`) };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  if (!isProductSlug(slug)) notFound();
   setRequestLocale(locale);
+  const slugs = productSlugsOf((await getTranslations("products")).raw("items"));
+  if (!slugs.includes(slug)) notFound();
   const t = await getTranslations("productPage");
   const tp = await getTranslations("products");
   const n = await getTranslations("nav");
   const pp = await getTranslations("productsPage");
   const name = tp(`items.${slug}.name`);
   const d = tp.raw(`items.${slug}.detail`) as ProductDetail;
-  const idx = productSlugs.indexOf(slug) + 1;
+  const idx = slugs.indexOf(slug) + 1;
+  const images = (await getTranslations("shared")).raw("images.products") as Record<string, string>;
   const specsHead = t.raw("specsHead") as string[];
   const gradesHead = t.raw("gradesHead") as string[];
 
@@ -65,13 +71,23 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
               </div>
             </div>
             <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-3">
-              <div className="ph-light relative aspect-[4/3] w-full">
-                <span className="label-mono absolute inset-x-6 bottom-5 text-[#59554D]">{t("gallery.main")}</span>
+              <div className="ph-light relative aspect-[4/3] w-full overflow-hidden">
+                {productImage(images, slug) ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={productImage(images, slug)} alt={name} className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <span className="label-mono absolute inset-x-6 bottom-5 text-[#59554D]">{t("gallery.main")}</span>
+                )}
               </div>
               <div className="grid grid-cols-3 gap-3">
                 {(["packaging", "stockyard", "loading"] as const).map((g) => (
-                  <div key={g} className="ph-light relative aspect-[4/3]">
-                    <span className="absolute start-3 bottom-2.5 font-mono text-[10px] uppercase tracking-[0.1em] text-[#59554D]">{t(`gallery.${g}`)}</span>
+                  <div key={g} className="ph-light relative aspect-[4/3] overflow-hidden">
+                    {productImage(images, `${slug}/${g}`) ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={productImage(images, `${slug}/${g}`)} alt={t(`gallery.${g}`)} className="absolute inset-0 h-full w-full object-cover" />
+                    ) : (
+                      <span className="absolute start-3 bottom-2.5 font-mono text-[10px] uppercase tracking-[0.1em] text-[#59554D]">{t(`gallery.${g}`)}</span>
+                    )}
                   </div>
                 ))}
               </div>

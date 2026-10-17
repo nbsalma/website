@@ -5,6 +5,9 @@ import { Chat } from "./Icons";
 export function ContactSection({ defaultMaterial }: { defaultMaterial?: string }) {
   const t = useTranslations("contact");
   const steps = t.raw("side.steps") as { title: string; body: string }[];
+  const s = useTranslations("shared");
+  const email = s("contact.salesEmail"), phone = s("contact.phone"), whatsapp = s("contact.whatsapp");
+  const waLink = whatsapp ? `https://wa.me/${whatsapp.replace(/\D/g, "")}` : "#";
   return (
     <>
       <section id="contact" className="bg-basalt pt-[clamp(48px,6vw,88px)] pb-[clamp(48px,6vw,80px)] text-paper">
@@ -40,9 +43,9 @@ export function ContactSection({ defaultMaterial }: { defaultMaterial?: string }
               <span className="eyebrow text-accent">{t("side.talk")}</span>
               <dl className="m-0 flex flex-col border-t border-ink">
                 {[
-                  [t("side.salesEmail"), "[sales@company.com]"],
-                  [t("side.phone"), "[+20 XXX XXX XXXX]"],
-                  [t("side.whatsapp"), "[+20 XXX XXX XXXX]"],
+                  [t("side.salesEmail"), email || "[sales@company.com]"],
+                  [t("side.phone"), phone || "[+20 XXX XXX XXXX]"],
+                  [t("side.whatsapp"), whatsapp || "[+20 XXX XXX XXXX]"],
                 ].map(([k, v]) => (
                   <div key={k} className="flex flex-wrap justify-between gap-2 border-b border-sand py-3">
                     <dt className="text-sm text-muted-2">{k}</dt>
@@ -50,7 +53,7 @@ export function ContactSection({ defaultMaterial }: { defaultMaterial?: string }
                   </div>
                 ))}
               </dl>
-              <a href="#" className="btn border border-ink text-[19px] text-ink [font-stretch:72%]">
+              <a href={waLink} target={whatsapp ? "_blank" : undefined} rel="noreferrer" className="btn border border-ink text-[19px] text-ink [font-stretch:72%]">
                 <Chat size={18} /> {t("side.whatsappCta")}
               </a>
             </div>

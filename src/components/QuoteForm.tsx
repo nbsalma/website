@@ -3,7 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { productSlugs } from "@/data/products";
+import { productSlugsOf } from "@/data/products";
 import { ArrowRight, Check, Upload } from "./Icons";
 
 const UNITS = ["t", "m3", "m2", "bags", "c20", "c40"] as const;
@@ -15,18 +15,19 @@ type Result = { reference: string; email: string };
 export function QuoteForm({ defaultMaterial }: { defaultMaterial?: string }) {
   const t = useTranslations("contact");
   const tp = useTranslations("products.items");
+  const productSlugs = productSlugsOf(useTranslations("products").raw("items"));
   const locale = useLocale();
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [error, setError] = useState<string>("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [result, setResult] = useState<Result | null>(null);
-  const [material, setMaterial] = useState<string>(defaultMaterial ?? productSlugs[0]);
+  const [material, setMaterial] = useState<string>(defaultMaterial ?? productSlugs[0] ?? "other");
 
   // Pre-select the material when arriving from a product page (/?material=cement#contact)
   useEffect(() => {
     const m = new URLSearchParams(window.location.search).get("material");
-    if (m && (productSlugs as readonly string[]).includes(m)) setMaterial(m);
-  }, []);
+    if (m && productSlugs.includes(m)) setMaterial(m);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -58,7 +59,7 @@ export function QuoteForm({ defaultMaterial }: { defaultMaterial?: string }) {
       setResult({ reference: json.reference, email: String(data.get("email") ?? "") });
       setStatus("idle");
       form.reset();
-      setMaterial(productSlugs[0]);
+      setMaterial(productSlugs[0] ?? "other");
     } catch {
       setStatus("error");
       setError(t("errors.generic"));

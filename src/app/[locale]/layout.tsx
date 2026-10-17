@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+import { draftMode } from "next/headers";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, rtlLocales, type Locale } from "@/i18n/routing";
 import { Header } from "@/components/Header";
@@ -27,11 +28,18 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   if (!routing.locales.includes(locale as Locale)) notFound();
   setRequestLocale(locale);
   const messages = await getMessages();
+  const preview = (await draftMode()).isEnabled;
   const dir = rtlLocales.includes(locale as Locale) ? "rtl" : "ltr";
 
   return (
     <html lang={locale} dir={dir}>
       <body>
+        {preview && (
+          <div className="sticky top-0 z-[100] flex items-center justify-center gap-4 bg-accent px-4 py-2 text-sm font-semibold text-white" dir="ltr">
+            Preview of unpublished changes
+            <a href={`/api/preview/exit?path=/${locale}`} className="underline">Exit preview</a>
+          </div>
+        )}
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>

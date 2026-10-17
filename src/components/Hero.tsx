@@ -6,6 +6,14 @@ import heroPort from "../../public/images/hero-port.jpg";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const img = useTranslations("shared").raw("images") as { hero?: string; heroSlide2?: string; heroSlide3?: string };
+  const photo = (src: string | undefined, alt: string, fallback: React.ReactNode) =>
+    src ? (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={src} alt={alt} className="absolute inset-0 h-full w-full object-cover" />
+    ) : (
+      fallback
+    );
   const facts = [
     [t("facts.origin"), t("facts.originValue")],
     [t("facts.port"), t("facts.portValue")],
@@ -50,7 +58,7 @@ export function Hero() {
               nextLabel={t("next")}
               className="min-h-[440px] border border-[#2F343A] bg-[#1C2024] sm:min-h-[clamp(320px,36vw,520px)]"
               slides={[
-                <Image
+                img.hero ? <div key="port">{photo(img.hero, t("photoAlt"), null)}</div> : <Image
                   key="port"
                   src={heroPort}
                   alt={t("photoAlt")}
@@ -60,8 +68,8 @@ export function Hero() {
                   placeholder="blur"
                   className="object-cover object-[40%_50%]"
                 />,
-                <div key="s2">{placeholder(t("slide2"))}</div>,
-                <div key="s3">{placeholder(t("slide3"))}</div>,
+                <div key="s2">{photo(img.heroSlide2, t("slide2"), placeholder(t("slide2")))}</div>,
+                <div key="s3">{photo(img.heroSlide3, t("slide3"), placeholder(t("slide3")))}</div>,
               ]}
             >
               <dl className="absolute inset-x-0 bottom-0 z-[1] m-0 grid grid-cols-[repeat(auto-fit,minmax(min(170px,100%),1fr))] border-t border-steel bg-basalt/85 backdrop-blur-sm">

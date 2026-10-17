@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "@/i18n/routing";
 import { ArrowRight } from "./Icons";
 
-export type ExplorerItem = { slug: string; name: string; short: string; photo: string };
+export type ExplorerItem = { slug: string; name: string; short: string; photo: string; image?: string };
 type Labels = { list: string; cantFind: string; quote: string; explore: string };
 
 export function ProductExplorer({ items, labels }: { items: ExplorerItem[]; labels: Labels }) {
@@ -44,7 +44,12 @@ export function ProductExplorer({ items, labels }: { items: ExplorerItem[]; labe
 
       <article className="min-w-0 flex-[999_1_560px] border border-sand bg-paper-2">
         <div key={sel.slug} className="ph-light anim-fade relative h-[clamp(220px,24vw,320px)]">
-          <span className="label-mono absolute start-6 bottom-5 text-[#59554D]">{sel.photo}</span>
+          {sel.image ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={sel.image} alt={sel.name} className="absolute inset-0 h-full w-full object-cover" />
+          ) : (
+            <span className="label-mono absolute start-6 bottom-5 text-[#59554D]">{sel.photo}</span>
+          )}
           <span className="absolute end-6 top-5 font-mono text-xs text-[#59554D]">
             {String(picked + 1).padStart(2, "0")} / {total}
           </span>

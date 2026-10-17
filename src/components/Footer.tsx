@@ -6,6 +6,8 @@ export function Footer() {
   const t = useTranslations("footer");
   const n = useTranslations("nav");
   const b = useTranslations("brand");
+  const s = useTranslations("shared");
+  const linkedin = s("social.linkedin"), facebook = s("social.facebook"), email = s("contact.salesEmail");
   const year = new Date().getFullYear();
   const col = "flex flex-col gap-3 text-sm";
   const head = "label-mono text-[#8D9298]";
@@ -42,8 +44,8 @@ export function Footer() {
               <span className={head}>{t("getInTouch")}</span>
               <Link href="/#contact" className={link}>{n("contact")}</Link>
               <Link href="/#contact" className={link}>{n("requestQuote")}</Link>
-              <a href="#" className={link}>[LinkedIn]</a>
-              <a href="#" className={link}>[Facebook]</a>
+              {linkedin && <a href={linkedin} target="_blank" rel="noreferrer" className={link}>LinkedIn</a>}
+              {facebook && <a href={facebook} target="_blank" rel="noreferrer" className={link}>Facebook</a>}
             </div>
             <div className={col}>
               <span className={head}>{t("office")}</span>
@@ -52,7 +54,7 @@ export function Footer() {
                 <br />
                 {t("address2")}
               </address>
-              <span className="text-[#E3E5E8]">[sales@company.com]</span>
+              {email ? <a href={`mailto:${email}`} className={link}>{email}</a> : <span className="text-[#E3E5E8]">[sales@company.com]</span>}
             </div>
           </nav>
         </div>
@@ -72,12 +74,13 @@ export function Footer() {
 export function MobileCta() {
   const t = useTranslations("mobileCta");
   const n = useTranslations("nav");
+  const whatsapp = useTranslations("shared")("contact.whatsapp");
   return (
     <div className="fixed inset-x-0 bottom-0 z-[60] flex gap-2.5 border-t border-steel bg-basalt/95 px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] min-[921px]:hidden">
       <Link href="/#contact" className="btn btn-primary flex-1">
         {t("quote")}
       </Link>
-      <a href="#" aria-label={n("whatsapp")} className="flex min-h-[50px] w-[50px] items-center justify-center border border-[#474C52] text-paper">
+      <a href={whatsapp ? `https://wa.me/${whatsapp.replace(/\D/g, "")}` : "#"} aria-label={n("whatsapp")} className="flex min-h-[50px] w-[50px] items-center justify-center border border-[#474C52] text-paper">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6Z" /></svg>
       </a>
     </div>

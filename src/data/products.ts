@@ -1,5 +1,3 @@
-export const productSlugs = ["cement", "sand", "marble", "clinker", "silica-sand"] as const;
-export type ProductSlug = (typeof productSlugs)[number];
 
 export type ProductDetail = {
   overview: string;
@@ -11,6 +9,8 @@ export type ProductDetail = {
   certs: [string, string][];
 };
 
-export function isProductSlug(s: string): s is ProductSlug {
-  return (productSlugs as readonly string[]).includes(s);
-}
+/** Products are edited in the admin dashboard; their order is the order of `products.items` in the content. */
+export const productSlugsOf = (items: unknown): string[] => (items && typeof items === "object" ? Object.keys(items) : []);
+
+/** A photo set in the dashboard for a product (`slug`) or one of its gallery slots (`slug/packaging`). */
+export const productImage = (images: Record<string, string> | undefined, key: string) => images?.[key] || "";

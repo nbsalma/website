@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { productSlugs } from "@/data/products";
+import { productImage, productSlugsOf } from "@/data/products";
 import { ArrowRight, CropMarks } from "@/components/Icons";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -16,6 +16,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
   const t = await getTranslations("productsPage");
   const tp = await getTranslations("products");
   const n = await getTranslations("nav");
+  const images = (await getTranslations("shared")).raw("images.products") as Record<string, string>;
 
   return (
     <div className="bg-paper text-ink">
@@ -35,11 +36,16 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
 
       <section aria-label={tp("listLabel")} className="pb-[clamp(72px,9vw,120px)]">
         <div className="container-x grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] gap-x-[clamp(28px,3vw,44px)] gap-y-[clamp(40px,4vw,56px)]">
-          {productSlugs.map((slug) => (
+          {productSlugsOf(tp.raw("items")).map((slug) => (
             <article key={slug} className="relative flex flex-col border border-sand-2 bg-paper">
               <CropMarks />
               <div className="ph-light relative h-[clamp(240px,22vw,320px)] border-b border-sand-2">
-                <span className="absolute start-[18px] bottom-[18px] bg-paper px-2.5 py-1.5 font-mono text-xs text-ink-2">{tp(`items.${slug}.photo`)}</span>
+                {productImage(images, slug) ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={productImage(images, slug)} alt={tp(`items.${slug}.name`)} className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <span className="absolute start-[18px] bottom-[18px] bg-paper px-2.5 py-1.5 font-mono text-xs text-ink-2">{tp(`items.${slug}.photo`)}</span>
+                )}
               </div>
               <div className="flex flex-1 flex-col gap-3.5 p-[clamp(22px,2.4vw,30px)]">
                 <h2 className="h-condensed m-0 text-[clamp(30px,2.6vw,38px)] leading-none [font-stretch:68%]">{tp(`items.${slug}.name`)}</h2>

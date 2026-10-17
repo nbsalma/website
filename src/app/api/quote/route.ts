@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { getSupabaseAdmin, QUOTE_BUCKET } from "@/lib/supabase";
+import { getQuoteSettings } from "@/lib/content";
 import { ALLOWED_FILE_TYPES, MAX_FILE_BYTES, makeReference, quoteSchema, UNIT_LABELS, type QuoteInput } from "@/lib/quote";
 
 export const runtime = "nodejs";
@@ -73,7 +74,8 @@ export async function POST(req: Request) {
   const reference = makeReference();
   const supabase = getSupabaseAdmin();
   const resendKey = process.env.RESEND_API_KEY;
-  const salesTo = process.env.SALES_EMAIL;
+  const settings = await getQuoteSettings();
+  const salesTo = settings.recipients.join(",");
 
   if (!supabase && !(resendKey && salesTo)) {
     if (process.env.NODE_ENV !== "production") {
@@ -124,7 +126,7 @@ export async function POST(req: Request) {
 
     if (resendKey && salesTo) {
       const resend = new Resend(resendKey);
-      const from = process.env.QUOTE_FROM_EMAIL ?? "NB Website <onboarding@resend.dev>";
+      const from = settings.from;
       const { error } = await resend.emails.send({
         from,
         to: salesTo.split(",").map((s) => s.trim()),

@@ -1,14 +1,16 @@
 import { useTranslations } from "next-intl";
 import { ProductExplorer } from "./ProductExplorer";
-import { productSlugs } from "@/data/products";
+import { productImage, productSlugsOf } from "@/data/products";
 
 export function ProductsSection() {
   const t = useTranslations("products");
-  const items = productSlugs.map((slug) => ({
+  const images = useTranslations("shared").raw("images.products") as Record<string, string>;
+  const items = productSlugsOf(t.raw("items")).map((slug) => ({
     slug,
     name: t(`items.${slug}.name`),
     short: t(`items.${slug}.short`),
     photo: t(`items.${slug}.photo`),
+    image: productImage(images, slug),
   }));
   return (
     <section id="products" className="bg-paper py-[clamp(72px,9vw,128px)]">

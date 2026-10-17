@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { productSlugs } from "@/data/products";
 
 export const UNITS = ["t", "m3", "m2", "bags", "c20", "c40"] as const;
 export const ORDER_TYPES = ["once", "recurring", "unsure"] as const;
@@ -18,7 +17,7 @@ const text = (max: number) => z.string().trim().max(max);
 const required = (max: number) => text(max).min(1);
 
 export const quoteSchema = z.object({
-  material: z.enum([...productSlugs, "other"] as [string, ...string[]]),
+  material: z.string().trim().regex(/^[a-z0-9-]{1,60}$/),
   grade: text(200).optional().default(""),
   quantity: required(40),
   unit: z.enum(UNITS),
