@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/routing";
+import { Link, routing } from "@/i18n/routing";
 import { productImage, productSlugsOf } from "@/data/products";
 import { ArrowRight, CropMarks } from "@/components/Icons";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "productsPage" });
-  return { title: t("metaTitle") };
+  return {
+    title: t("metaTitle"),
+    alternates: { canonical: `/${locale}/products`, languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}/products`])) },
+  };
 }
 
 export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {

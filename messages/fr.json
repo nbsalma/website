@@ -739,7 +739,7 @@
     "certs": "Certifications",
     "download": "Télécharger",
     "datasheetTitle": "Fiche technique — {name}",
-    "datasheetMeta": "[Révision / date] · [Taille du fichier]",
+    "datasheetMeta": "PDF",
     "sideTitle": "Vous recherchez ce matériau ?",
     "sideBody": "Obtenez une proposition commerciale selon votre quantité et votre destination.",
     "talk": "Parler au service commercial",
@@ -749,5 +749,30 @@
   },
   "mobileCta": {
     "quote": "Demander un devis"
+  },
+  "legal": {
+    "updatedLabel": "Dernière mise à jour",
+    "back": "Retour à l'accueil",
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "updated": "17 octobre 2026",
+      "body": "NB Brokerage & Supply Services (« NB », « nous ») fournit des matériaux de construction depuis l'Égypte aux entreprises de toute l'Afrique. Cette politique explique quelles données personnelles nous collectons via ce site et par e-mail, pourquoi nous les utilisons et quels sont vos choix.\n\n## Responsable du traitement\nNB Brokerage & Supply Services est responsable de vos données personnelles. Pour toute question ou demande relative à la confidentialité, écrivez à info@nbsalma.com.\n\n## Données collectées\n- **Demandes de devis :** nom de la société, votre nom, e-mail professionnel, numéro de téléphone ou WhatsApp, pays et port de destination, détails de votre besoin et tout document que vous joignez.\n- **E-mails que vous nous envoyez :** votre adresse e-mail, le contenu de votre message et ses pièces jointes.\n- **Visites du site :** les données techniques envoyées par votre navigateur (adresse IP, type de navigateur, pages consultées), utilisées pour fournir et protéger le site, ainsi que des statistiques de visite anonymes collectées sans cookies.\n\n## Finalités\n- Répondre à votre demande et préparer une offre, à votre demande, avant tout contrat.\n- Gérer les commandes et notre relation commerciale.\n- Assurer la sécurité du site et de nos systèmes et prévenir les abus.\n- Respecter nos obligations légales, fiscales et comptables.\n\nNous ne vendons pas vos données, ne prenons aucune décision automatisée à votre sujet et ne vous envoyons de communications marketing que si vous le demandez.\n\n## Destinataires\n- Prestataires agissant sur nos instructions : hébergement du site (Vercel), base de données et stockage de fichiers (Supabase, serveurs en Irlande, UE) et envoi d'e-mails (Resend).\n- Partenaires logistiques, d'inspection et de transport, uniquement lorsque c'est nécessaire pour exécuter votre commande.\n- Autorités publiques, lorsque la loi l'exige.\n\nCertains prestataires sont situés dans d'autres pays, notamment aux États-Unis. Lorsque des données quittent votre pays, nous nous appuyons sur des clauses contractuelles types ou des garanties équivalentes.\n\n## Durée de conservation\n- Demandes de devis sans commande : jusqu'à 24 mois après notre dernier contact.\n- Dossiers clients et commandes : aussi longtemps que le droit commercial et fiscal l'exige.\n- Journaux de sécurité : jusqu'à 30 jours.\n\n## Vos droits\nSelon votre lieu de résidence, vous pouvez nous demander une copie de vos données, leur rectification, leur suppression, la limitation de leur utilisation ou vous y opposer, ou encore les recevoir dans un format portable. Écrivez à info@nbsalma.com : nous répondons sous 30 jours. Vous pouvez aussi saisir l'autorité de protection des données de votre pays.\n\n## Sécurité\nLes données circulent via des connexions chiffrées (HTTPS), sont stockées avec un accès restreint et ne sont visibles que par le personnel qui en a besoin pour traiter votre demande.\n\n## Modifications\nNous pouvons mettre à jour cette politique. La date indiquée en haut correspond à la dernière modification."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "updated": "17 octobre 2026",
+      "body": "Les présentes conditions s'appliquent à votre utilisation de nbsalma.com, exploité par NB Brokerage & Supply Services (« NB », « nous »). En utilisant le site, vous les acceptez.\n\n## Informations du site\nLe site présente nos produits et services à titre d'information générale. Les spécifications, qualités, conditionnements et disponibilités sont indicatifs et peuvent évoluer. Aucun contenu du site ne constitue une offre ferme.\n\n## Devis et commandes\nUne demande de devis ne crée pas de contrat. Les prix, quantités, spécifications, Incoterms, délais de livraison et conditions de paiement ne deviennent contraignants qu'une fois confirmés par les deux parties dans une offre écrite, un contrat ou une confirmation de commande, qui prévaut alors sur les présentes conditions.\n\n## Utilisation du site\nVous vous engagez à ne pas utiliser le site de manière abusive : aucun usage illicite, aucune tentative d'accès non autorisé, aucune perturbation de son fonctionnement et aucune collecte automatisée de son contenu. Les informations que vous nous transmettez doivent être exactes et ne porter atteinte aux droits de personne.\n\n## Propriété intellectuelle\nLes textes, photos, logos et la conception de ce site appartiennent à NB ou à ses concédants. Vous pouvez consulter et imprimer des pages pour votre usage professionnel ; toute autre reproduction nécessite notre accord écrit.\n\n## Liens externes\nLes liens vers des sites tiers sont fournis pour votre commodité. Nous ne sommes pas responsables de leur contenu ni de leurs pratiques.\n\n## Responsabilité\nNous veillons à l'exactitude et à la disponibilité du site, sans pouvoir garantir qu'il soit exempt d'erreurs ou toujours accessible. Dans les limites permises par la loi, nous ne sommes pas responsables des pertes indirectes liées à l'utilisation du site. Rien dans ces conditions ne limite une responsabilité qui ne peut l'être légalement.\n\n## Droit applicable\nLes présentes conditions sont régies par le droit de la République arabe d'Égypte et relèvent des tribunaux compétents d'Égypte, sauf disposition impérative contraire du pays où vous êtes établi.\n\n## Modifications et contact\nNous pouvons mettre à jour ces conditions ; la date en haut indique la dernière version. Questions : info@nbsalma.com."
+    },
+    "cookies": {
+      "title": "Politique de cookies",
+      "updated": "17 octobre 2026",
+      "body": "Les cookies sont de petits fichiers qu'un site enregistre dans votre navigateur. Cette page présente les quelques cookies que nous utilisons.\n\n## Cookies utilisés\nNous utilisons uniquement des cookies strictement nécessaires au fonctionnement du site :\n\n- **NEXT_LOCALE :** mémorise la langue choisie (anglais, français ou arabe). Conservé jusqu'à un an.\n- **Cookies d'aperçu :** déposés uniquement pour notre personnel lorsqu'il prévisualise des modifications non publiées. Les visiteurs ne les reçoivent jamais.\n\n## Statistiques sans cookies\nNous mesurons les visites avec un outil respectueux de la vie privée qui n'utilise pas de cookies, ne vous suit pas d'un site à l'autre et ne crée pas de profil.\n\n## Aucun cookie publicitaire ni de suivi\nNous n'utilisons aucun cookie publicitaire, de réseaux sociaux ou de suivi intersites. Comme nous n'utilisons que des cookies nécessaires, nous n'affichons pas de bandeau cookies. Si cela change, nous vous demanderons d'abord votre consentement.\n\n## Gérer les cookies\nVous pouvez supprimer ou bloquer les cookies dans les réglages de votre navigateur. Si vous bloquez le cookie de langue, le site utilisera simplement la langue préférée de votre navigateur à chaque visite.\n\n## Contact\nQuestions sur les cookies ou la confidentialité : info@nbsalma.com. Consultez aussi notre politique de confidentialité."
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "home": "Aller à l'accueil",
+    "products": "Voir les produits"
   }
 }

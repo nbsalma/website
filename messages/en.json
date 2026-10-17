@@ -739,7 +739,7 @@
     "certs": "Certifications",
     "download": "Download",
     "datasheetTitle": "Technical datasheet — {name}",
-    "datasheetMeta": "[Revision / date] · [File size]",
+    "datasheetMeta": "PDF",
     "sideTitle": "Sourcing this material?",
     "sideBody": "Get a commercial proposal based on your quantity and destination.",
     "talk": "Talk to Sales",
@@ -749,5 +749,30 @@
   },
   "mobileCta": {
     "quote": "Request a Quote"
+  },
+  "legal": {
+    "updatedLabel": "Last updated",
+    "back": "Back to home",
+    "privacy": {
+      "title": "Privacy policy",
+      "updated": "17 October 2026",
+      "body": "NB Brokerage & Supply Services (\"NB\", \"we\", \"us\") supplies building materials from Egypt to businesses across Africa. This policy explains what personal data we collect through this website and by email, why we use it, and the choices you have.\n\n## Who is responsible\nNB Brokerage & Supply Services is responsible for your personal data. For any privacy question or request, write to info@nbsalma.com.\n\n## What we collect\n- **Quote requests:** company name, your name, business email, phone or WhatsApp number, destination country and port, the details of your requirement, and any document you upload.\n- **Emails you send us:** your email address, the content of your message and any attachments.\n- **Website visits:** the technical data your browser sends (IP address, browser type, pages requested), used to deliver and protect the site, and anonymous visit statistics collected without cookies.\n\n## Why we use it\n- To answer your request and prepare a proposal, at your request, before any contract.\n- To manage orders and our business relationship with you.\n- To keep the website and our systems secure and to prevent abuse.\n- To meet our legal, tax and accounting obligations.\n\nWe do not sell your data, we do not use it for automated decisions about you, and we only send you marketing if you ask for it.\n\n## Who we share it with\n- Service providers that work on our instructions: website hosting (Vercel), database and file storage (Supabase, with servers in Ireland, EU) and email delivery (Resend).\n- Logistics, inspection and shipping partners, only when needed to fulfil your order.\n- Public authorities, when the law requires it.\n\nSome of these providers are based in other countries, including the United States. Where data leaves your country, we rely on standard contractual clauses or equivalent safeguards.\n\n## How long we keep it\n- Quote requests that do not lead to an order: up to 24 months after our last contact.\n- Customer and order records: for as long as commercial and tax law requires.\n- Security logs: up to 30 days.\n\n## Your rights\nDepending on where you live, you can ask us to give you a copy of your data, correct it, delete it, limit or object to how we use it, or send it to you in a portable format. Email info@nbsalma.com and we will reply within 30 days. You can also complain to your local data-protection authority.\n\n## Security\nData is sent over encrypted connections (HTTPS), stored with restricted access, and only staff who need it to handle your request can see it.\n\n## Changes to this policy\nWe may update this policy from time to time. The date at the top shows when it last changed."
+    },
+    "terms": {
+      "title": "Terms of use",
+      "updated": "17 October 2026",
+      "body": "These terms apply to your use of nbsalma.com, operated by NB Brokerage & Supply Services (\"NB\", \"we\", \"us\"). By using the website you accept them.\n\n## Information on this website\nThe website describes our products and services for general information. Specifications, grades, packaging and availability are indicative and may change. Nothing on the website is a binding offer.\n\n## Quotes and orders\nA quote request does not create a contract. Prices, quantities, specifications, Incoterms, delivery dates and payment terms are only binding once both parties confirm them in a written proposal, contract or order confirmation, which then takes precedence over these terms.\n\n## Your use of the website\nYou agree not to misuse the website: no unlawful use, no attempts to gain unauthorised access, no interference with its operation, and no automated collection of its content. Information you send us must be accurate and must not infringe anyone's rights.\n\n## Intellectual property\nThe texts, photos, logos and design of this website belong to NB or its licensors. You may view and print pages for your own business use; any other reproduction needs our written permission.\n\n## Links to other websites\nLinks to third-party websites are provided for convenience. We are not responsible for their content or practices.\n\n## Liability\nWe take care to keep the website accurate and available, but we cannot guarantee that it is error-free or always online. To the extent permitted by law, we are not liable for indirect losses arising from the use of the website. Nothing in these terms limits liability that cannot be limited by law.\n\n## Governing law\nThese terms are governed by the laws of the Arab Republic of Egypt, and the competent courts of Egypt have jurisdiction, unless mandatory law where you are based provides otherwise.\n\n## Changes and contact\nWe may update these terms; the date at the top shows the latest version. Questions: info@nbsalma.com."
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "updated": "17 October 2026",
+      "body": "Cookies are small files a website stores in your browser. This page explains the few we use.\n\n## Cookies we use\nWe only use cookies that are strictly necessary for the website to work:\n\n- **NEXT_LOCALE:** remembers the language you chose (English, French or Arabic). Kept for up to one year.\n- **Preview cookies:** set only for our own staff when they preview unpublished changes. Visitors never receive them.\n\n## Statistics without cookies\nWe count visits with privacy-friendly analytics that do not use cookies, do not track you across websites and do not build a profile of you.\n\n## No advertising or tracking cookies\nWe do not use advertising, social-media or cross-site tracking cookies. Because we only use necessary cookies, we do not show a cookie banner. If that ever changes, we will ask for your consent first.\n\n## Managing cookies\nYou can delete or block cookies in your browser settings. If you block the language cookie, the website will simply ask your browser for your preferred language on each visit.\n\n## Contact\nQuestions about cookies or privacy: info@nbsalma.com. See also our privacy policy."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for doesn't exist or has moved.",
+    "home": "Go to the home page",
+    "products": "Browse products"
   }
 }

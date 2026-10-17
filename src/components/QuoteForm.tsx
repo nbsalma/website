@@ -225,7 +225,7 @@ export function QuoteForm({ defaultMaterial }: { defaultMaterial?: string }) {
 
       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-sand pt-6">
         <p className="m-0 max-w-[400px] text-[13px] text-muted-2">
-          {t("consent")} <a href="#" className="text-accent">{t("privacy")}</a>
+          {t("consent")} <Link href="/privacy" className="text-accent">{t("privacy")}</Link>
         </p>
         <button type="submit" disabled={status === "sending"} className="btn btn-primary min-h-14 cursor-pointer border-0 px-[30px] text-xl [font-stretch:72%] disabled:opacity-60">
           {status === "sending" ? t("sending") : t("submit")} <ArrowRight />

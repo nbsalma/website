@@ -61,9 +61,9 @@ export function Footer() {
         <div className="flex flex-wrap justify-between gap-4 border-t border-[#24282C] pt-6 text-[13px] text-[#8D9298]">
           <span>{t("rights", { year })}</span>
           <div className="flex flex-wrap gap-6">
-            <a href="#" className="text-fog">{t("privacy")}</a>
-            <a href="#" className="text-fog">{t("terms")}</a>
-            <a href="#" className="text-fog">{t("cookies")}</a>
+            <Link href="/privacy" className="text-fog">{t("privacy")}</Link>
+            <Link href="/terms" className="text-fog">{t("terms")}</Link>
+            <Link href="/cookies" className="text-fog">{t("cookies")}</Link>
           </div>
         </div>
       </div>
@@ -80,9 +80,11 @@ export function MobileCta() {
       <Link href="/#contact" className="btn btn-primary flex-1">
         {t("quote")}
       </Link>
-      <a href={whatsapp ? `https://wa.me/${whatsapp.replace(/\D/g, "")}` : "#"} aria-label={n("whatsapp")} className="flex min-h-[50px] w-[50px] items-center justify-center border border-[#474C52] text-paper">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6Z" /></svg>
-      </a>
+      {whatsapp && (
+        <a href={`https://wa.me/${whatsapp.replace(/\D/g, "")}`} aria-label={n("whatsapp")} className="flex min-h-[50px] w-[50px] items-center justify-center border border-[#474C52] text-paper">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6Z" /></svg>
+        </a>
+      )}
     </div>
   );
 }

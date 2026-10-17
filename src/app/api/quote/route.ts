@@ -2,19 +2,38 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { getSupabaseAdmin, QUOTE_BUCKET } from "@/lib/supabase";
 import { getQuoteSettings } from "@/lib/content";
+import { reportError } from "@/lib/errors";
 import { ALLOWED_FILE_TYPES, MAX_FILE_BYTES, makeReference, quoteSchema, UNIT_LABELS, type QuoteInput } from "@/lib/quote";
 
 export const runtime = "nodejs";
 
-// Very small per-instance rate limit: 5 requests / 10 minutes per IP.
-const hits = new Map<string, number[]>();
-function rateLimited(ip: string) {
-  const now = Date.now();
-  const recent = (hits.get(ip) ?? []).filter((t) => now - t < 10 * 60 * 1000);
-  recent.push(now);
-  hits.set(ip, recent);
-  return recent.length > 5;
+// Rate limit: 5 requests / 10 minutes per IP, counted in the database so it holds across instances.
+async function rateLimited(ip: string) {
+  const supa = getSupabaseAdmin();
+  if (!supa) return false;
+  const key = `quote-ip:${ip}`;
+  const since = new Date(Date.now() - 10 * 60_000).toISOString();
+  const { count } = await supa.from("mail_login_attempts").select("id", { count: "exact", head: true }).eq("key", key).gte("created_at", since);
+  if ((count ?? 0) >= 5) return true;
+  await supa.from("mail_login_attempts").insert({ key, success: true });
+  return false;
 }
+
+/** Short acknowledgement to the buyer, in the language they used on the site. */
+const ACK: Record<string, { subject: (r: string) => string; lines: (name: string, r: string) => string[] }> = {
+  en: {
+    subject: (r) => `We received your quote request (${r})`,
+    lines: (n, r) => [`Hello ${n},`, `Thank you for your request. Our sales team will review it and reply with availability, specifications and a proposal.`, `Your reference: ${r}. Reply to this email if you want to add anything.`, `NB Brokerage & Supply Services`],
+  },
+  fr: {
+    subject: (r) => `Nous avons bien reçu votre demande de devis (${r})`,
+    lines: (n, r) => [`Bonjour ${n},`, `Merci pour votre demande. Notre équipe commerciale va l'étudier et vous répondra avec la disponibilité, les spécifications et une offre.`, `Votre référence : ${r}. Répondez à cet e-mail pour ajouter des informations.`, `NB Brokerage & Supply Services`],
+  },
+  ar: {
+    subject: (r) => `استلمنا طلب عرض السعر الخاص بك (${r})`,
+    lines: (n, r) => [`مرحبًا ${n}،`, `شكرًا لطلبك. سيراجعه فريق المبيعات لدينا ويرد عليك بالتوافر والمواصفات وعرض السعر.`, `رقمك المرجعي: ${r}. يمكنك الرد على هذه الرسالة لإضافة أي معلومات.`, `NB Brokerage & Supply Services`],
+  },
+};
 
 const escape = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
@@ -43,7 +62,7 @@ ${rows.map(([k, v]) => `<tr><td style="color:#5f6368;border-bottom:1px solid #ee
 
 export async function POST(req: Request) {
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  if (rateLimited(ip)) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
+  if (await rateLimited(ip).catch(() => false)) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
 
   let form: FormData;
   try {
@@ -136,12 +155,23 @@ export async function POST(req: Request) {
       });
       if (error) {
         // Stored in Supabase already → don't fail the buyer's request over email.
-        console.error("[quote] email failed", error);
+        await reportError(new Error(`Quote email to sales failed: ${error.message}`), { method: "POST", path: "/api/quote" });
         if (!supabase) throw new Error("email failed");
+      } else {
+        const ack = ACK[q.locale] ?? ACK.en;
+        const dir = q.locale === "ar" ? "rtl" : "ltr";
+        const { error: ackErr } = await resend.emails.send({
+          from,
+          to: q.email,
+          replyTo: settings.recipients[0],
+          subject: ack.subject(reference),
+          html: `<div dir="${dir}" style="font-family:Arial,sans-serif;font-size:15px;line-height:1.6;color:#1f2328">${ack.lines(escape(q.name), escape(reference)).map((l) => `<p>${l}</p>`).join("")}</div>`,
+        });
+        if (ackErr) console.error("[quote] acknowledgement failed", ackErr.message);
       }
     }
   } catch (e) {
-    console.error("[quote]", e);
+    await reportError(e, { method: "POST", path: "/api/quote" });
     return NextResponse.json({ error: "server_error" }, { status: 500 });
   }
 

@@ -6,6 +6,8 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { routing, rtlLocales, type Locale } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer, MobileCta } from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -15,11 +17,26 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const ogLocale = { en: "en_US", fr: "fr_FR", ar: "ar_EG" }[locale as Locale] ?? "en_US";
   return {
     title: t("title"),
     description: t("description"),
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-    alternates: { languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])) },
+    metadataBase: new URL(SITE_URL),
+    applicationName: "NB Brokerage & Supply Services",
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { ...Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])), "x-default": "/en" },
+    },
+    openGraph: {
+      type: "website",
+      siteName: "NB Brokerage & Supply Services",
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}`,
+      locale: ogLocale,
+    },
+    twitter: { card: "summary_large_image", title: t("title"), description: t("description") },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -46,6 +63,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <Footer />
           <MobileCta />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

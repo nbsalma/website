@@ -16,6 +16,8 @@ export type Shared = {
   contact: { salesEmail: string; phone: string; whatsapp: string };
   social: { linkedin: string; facebook: string };
   images: { hero: string; heroSlide2: string; heroSlide3: string; products: Record<string, string> };
+  /** Product slug -> public URL of its PDF datasheet. Products without one hide the download. */
+  datasheets: Record<string, string>;
 };
 
 type Tree = { [k: string]: unknown };
@@ -25,6 +27,7 @@ export const DEFAULT_SHARED: Shared = {
   contact: { salesEmail: "", phone: "", whatsapp: "" },
   social: { linkedin: "", facebook: "" },
   images: { hero: "", heroSlide2: "", heroSlide3: "", products: {} },
+  datasheets: {},
 };
 
 export const DEFAULT_CONTENT: SiteContent = { en, fr, ar, shared: DEFAULT_SHARED };

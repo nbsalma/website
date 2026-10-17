@@ -17,7 +17,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const tp = await getTranslations({ locale, namespace: "products" });
   if (!productSlugsOf(tp.raw("items")).includes(slug)) return {};
   const t = await getTranslations({ locale, namespace: "products.items" });
-  return { title: `${t(`${slug}.name`)} — NB Brokerage & Supply Services`, description: t(`${slug}.short`) };
+  const images = (await getTranslations({ locale, namespace: "shared" })).raw("images.products") as Record<string, string>;
+  const photo = productImage(images, slug);
+  const title = `${t(`${slug}.name`)} — NB Brokerage & Supply Services`;
+  return {
+    title,
+    description: t(`${slug}.short`),
+    alternates: { canonical: `/${locale}/products/${slug}`, languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}/products/${slug}`])) },
+    openGraph: { type: "website", siteName: "NB Brokerage & Supply Services", title, description: t(`${slug}.short`), url: `/${locale}/products/${slug}`, ...(photo ? { images: [photo] } : {}) },
+  };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -32,7 +40,9 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
   const name = tp(`items.${slug}.name`);
   const d = tp.raw(`items.${slug}.detail`) as ProductDetail;
   const idx = slugs.indexOf(slug) + 1;
-  const images = (await getTranslations("shared")).raw("images.products") as Record<string, string>;
+  const shared = await getTranslations("shared");
+  const images = shared.raw("images.products") as Record<string, string>;
+  const datasheet = ((shared.raw("datasheets") ?? {}) as Record<string, string>)[slug] || "";
   const specsHead = t.raw("specsHead") as string[];
   const gradesHead = t.raw("gradesHead") as string[];
 
@@ -43,7 +53,7 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
     ["packaging", t("packaging")],
     ["applications", t("applications")],
     ["certs", t("certs")],
-    ["datasheet", t("datasheet")],
+    ...(datasheet ? [["datasheet", t("datasheet")]] : []),
   ];
   const h2 = "m-0 text-[clamp(28px,3vw,40px)] font-semibold tracking-[-0.02em] [font-stretch:106%]";
   const th = "border-b border-ink py-3 pe-4 text-start font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-muted-2";
@@ -67,7 +77,7 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
               <p className="m-0 max-w-[540px] text-[17px] leading-[1.65] text-ink-2">{tp(`items.${slug}.short`)}</p>
               <div className="flex flex-wrap gap-3">
                 <a href="#rfq" className="btn btn-primary min-h-[52px] px-6">{n("requestQuote")} <ArrowRight /></a>
-                <a href="#datasheet" className="btn btn-ghost-light min-h-[52px] font-medium"><Download /> {t("datasheet")}</a>
+                {datasheet && <a href="#datasheet" className="btn btn-ghost-light min-h-[52px] font-medium"><Download /> {t("datasheet")}</a>}
               </div>
             </div>
             <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-3">
@@ -176,13 +186,15 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
                 ))}
               </div>
             </div>
-            <div id="datasheet" className="flex flex-wrap items-center justify-between gap-5 border border-sand bg-paper-2 px-7 py-6">
-              <div className="flex items-center gap-[18px]">
-                <span className="flex h-16 w-[52px] flex-none items-end justify-center border border-ink pb-2 font-mono text-[10px] font-medium">PDF</span>
-                <span className="flex flex-col gap-1"><span className="text-[17px] font-semibold">{t("datasheetTitle", { name })}</span><span className="text-[13px] text-muted-2">{t("datasheetMeta")}</span></span>
+            {datasheet && (
+              <div id="datasheet" className="flex flex-wrap items-center justify-between gap-5 border border-sand bg-paper-2 px-7 py-6">
+                <div className="flex items-center gap-[18px]">
+                  <span className="flex h-16 w-[52px] flex-none items-end justify-center border border-ink pb-2 font-mono text-[10px] font-medium">PDF</span>
+                  <span className="flex flex-col gap-1"><span className="text-[17px] font-semibold">{t("datasheetTitle", { name })}</span><span className="text-[13px] text-muted-2">{t("datasheetMeta")}</span></span>
+                </div>
+                <a href={datasheet} target="_blank" rel="noreferrer" className="btn min-h-12 bg-graphite text-sm text-paper"><Download /> {t("download")}</a>
               </div>
-              <a href="#" className="btn min-h-12 bg-graphite text-sm text-paper"><Download /> {t("download")}</a>
-            </div>
+            )}
           </div>
 
           <aside className="flex min-w-0 flex-[1_1_300px] flex-col gap-5 lg:sticky lg:top-[100px]">
