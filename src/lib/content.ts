@@ -1,5 +1,6 @@
 import "server-only";
 import { unstable_cache } from "next/cache";
+import type { AbstractIntlMessages } from "next-intl";
 import { draftMode } from "next/headers";
 import en from "../../messages/en.json";
 import fr from "../../messages/fr.json";
@@ -15,7 +16,7 @@ import { getSupabaseAdmin } from "./supabase";
 export type Shared = {
   contact: { salesEmail: string; phone: string; whatsapp: string };
   social: { linkedin: string; facebook: string };
-  images: { hero: string; heroSlide2: string; heroSlide3: string; products: Record<string, string> };
+  images: { hero: string; heroSlide2: string; heroSlide3: string; products: Record<string, string>; about: string[]; founder: string };
   /** Product slug -> public URL of its PDF datasheet. Products without one hide the download. */
   datasheets: Record<string, string>;
 };
@@ -26,7 +27,7 @@ export type SiteContent = { en: Tree; fr: Tree; ar: Tree; shared: Shared };
 export const DEFAULT_SHARED: Shared = {
   contact: { salesEmail: "", phone: "", whatsapp: "" },
   social: { linkedin: "", facebook: "" },
-  images: { hero: "", heroSlide2: "", heroSlide3: "", products: {} },
+  images: { hero: "", heroSlide2: "", heroSlide3: "", products: {}, about: [], founder: "" },
   datasheets: {},
 };
 
@@ -110,7 +111,8 @@ export async function getSiteContent(): Promise<SiteContent> {
 /** Messages for next-intl: the locale's texts plus the language-independent `shared` settings. */
 export async function getSiteMessages(locale: "en" | "fr" | "ar") {
   const c = await getSiteContent();
-  return { ...c[locale], shared: c.shared };
+  // `shared` holds a few arrays (e.g. about photos); next-intl reads them with t.raw().
+  return { ...c[locale], shared: c.shared } as unknown as AbstractIntlMessages;
 }
 
 /** Quote-form email settings, editable in the dashboard; env vars are the fallback. */

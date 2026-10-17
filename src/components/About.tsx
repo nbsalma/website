@@ -6,6 +6,8 @@ export function AboutSection() {
   const facts = t.raw("facts") as { k: string; v: string }[];
   const slides = t.raw("slides") as { title: string; desc: string }[];
   const tones = ["#DDD9D1", "#D5D0C6", "#E0DCD4", "#D8D3CA"];
+  const images = useTranslations("shared").raw("images") as { about?: string[]; founder?: string };
+  const photos = images.about ?? [];
 
   return (
     <section id="about" className="bg-concrete py-[clamp(72px,9vw,128px)]">
@@ -19,14 +21,24 @@ export function AboutSection() {
             slideLabels={slides.map((s, k) => t("show", { n: k + 1, title: s.title }))}
             className="ph-light min-h-[clamp(320px,36vw,520px)] min-w-0 flex-[1_1_420px]"
             slides={slides.map((s, i) => (
-              <div key={s.title} className="ph-light absolute inset-0" style={{ backgroundColor: tones[i % tones.length] }}>
-                <div className="absolute inset-x-6 top-[22px] flex flex-col gap-2">
-                  <span className="label-mono text-accent">
+              photos[i] ? (
+                <div key={s.title} className="absolute inset-0">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={photos[i]} alt={s.title} className="absolute inset-0 h-full w-full object-cover" />
+                  <span className="label-mono absolute start-6 top-[22px] bg-paper/90 px-2 py-1 text-accent">
                     {String(i + 1).padStart(2, "0")} — {s.title}
                   </span>
-                  <span className="label-mono leading-relaxed tracking-[0.1em] text-[#59554D]">{s.desc}</span>
                 </div>
-              </div>
+              ) : (
+                <div key={s.title} className="ph-light absolute inset-0" style={{ backgroundColor: tones[i % tones.length] }}>
+                  <div className="absolute inset-x-6 top-[22px] flex flex-col gap-2">
+                    <span className="label-mono text-accent">
+                      {String(i + 1).padStart(2, "0")} — {s.title}
+                    </span>
+                    <span className="label-mono leading-relaxed tracking-[0.1em] text-[#59554D]">{s.desc}</span>
+                  </div>
+                </div>
+              )
             ))}
           />
 
@@ -57,8 +69,13 @@ export function AboutSection() {
 
         <div className="flex flex-wrap items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10 border-t border-ink pt-[clamp(48px,6vw,72px)]">
           <div className="flex min-w-0 flex-[0_1_320px] flex-col gap-4">
-            <div className="ph-light relative aspect-[4/5] w-full">
-              <span className="label-mono absolute inset-x-5 bottom-[18px] text-[#59554D]">{t("portrait")}</span>
+            <div className="ph-light relative aspect-[4/5] w-full overflow-hidden">
+              {images.founder ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={images.founder} alt={t("founderName")} className="absolute inset-0 h-full w-full object-cover" />
+              ) : (
+                <span className="label-mono absolute inset-x-5 bottom-[18px] text-[#59554D]">{t("portrait")}</span>
+              )}
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-xl font-semibold [font-stretch:106%]">{t("founderName")}</span>
