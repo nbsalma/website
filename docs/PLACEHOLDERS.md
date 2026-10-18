@@ -1,69 +1,48 @@
 # nbsalma.com: placeholder checklist
 
-Checked against the live site on 17 Oct 2026: 30 pages (home, products, 5 product pages and 3 legal pages, each in EN, FR and AR).
-Everything is edited in the dashboard (dashboard.nbsalma.com), then you click **Publish**.
-If you leave French or Arabic empty, that language shows the English text.
+Updated 18 Oct 2026. Every text placeholder is now filled in the dashboard **draft** (EN, FR, AR); no "[…]" is left.
+None of it is live until you open dashboard.nbsalma.com → Website content → **Preview**, then **Publish**.
 
-## A. Text written for you (in the draft, not live until you publish)
+## A. Assumptions to confirm with the founder
 
-Open **Website content**, click **Preview** to check it, then **Publish**. Every item is in EN, FR and AR.
+These are reasonable industry defaults, not facts we were given. Change any that are wrong before publishing.
 
-| Where | What was written |
+| Where | Assumed value |
 |---|---|
-| Footer: company description | "Building-material supply from Egypt for importers, distributors and contractors across Africa." |
-| Contact: intro + "request received" message | Took out "[XX business hours]". If you want to promise a reply time (e.g. "within one business day"), add it back. |
-| About: company story | Built only from facts already on the site: the founder, the Sinai base, Al-Arish port, the 5 products and the 5 markets |
-| About: supply philosophy | Clear specs agreed before shipment, consistent quality, honest communication |
-| About: where we're going (vision) | Growing from West Africa to more markets on the continent. **Check that this matches your plans.** |
-| Products: short description (sand, marble, clinker, silica sand) | One line each on what the material is used for |
-| Products: overview (all 5) | Sourced in Egypt; grade and specification agreed before shipment. No technical claims |
-| Products: applications (sand, marble, clinker, silica sand) | 3 typical uses per material |
-| Product page: datasheet label | "PDF" (this section only appears once a datasheet is uploaded) |
+| Founded | 2023 (given: 3 years ago) |
+| Office address (footer) | Al-Arish, North Sinai, Egypt (no street address) |
+| Shipment modes (top banner + Export section) | Bulk vessels and containers by sea |
+| Trade terms | FOB, CFR and CIF |
+| Export documents | Commercial invoice, packing list, bill of lading, certificate of origin |
+| Founder quote | "Our buyers plan whole projects around our shipments. So we only promise what we can deliver — and then we deliver it." **The founder must approve a quote in her name.** |
+| Founder bio | Founded the company in 2023; leads supplier relationships; works with buyers from inquiry to delivery (no invented career history) |
+| Certifications (all products) | Producer's mill test certificate / CoA per lot; third-party inspection (SGS, Bureau Veritas) on request |
 
-## B. Facts only you can provide
+### Product figures (all assumed except where noted)
 
-### Company (Website content → Home · about / Footer / Home · top banner / Home · where we supply)
-- [ ] **Founded:** year
-- [ ] **Office address:** street, city (footer)
-- [ ] **Shipment modes:** top banner fact "[Bulk / Container / Land]" and the Export section row
-- [ ] **Trade terms:** which Incoterms (FOB, CFR, CIF…)
-- [ ] **Export documents** sent with each shipment (certificate of origin, bill of lading, packing list…)
-- [ ] **Founder quote:** in the founder's own words
-- [ ] **Founder biography:** background and years in the sector
-- [ ] LinkedIn / Facebook links (optional: hidden while empty)
+| Product | Min. order | Capacity / month | Lead time | Specs | Grades |
+|---|---|---|---|---|---|
+| Cement | 1 ton *(yours)* | 1,000 t *(yours)* | 1 week *(yours)* | ≥ 42.5 MPa at 28 days (EN 196-1); setting ≥ 45 min *(yours)* | CEM I 42.5N, CEM I 52.5N, SRC |
+| Sand | 1 ton | 5,000 t | 1–2 weeks | 0–4 mm, fines ≤ 3 %, moisture ≤ 5 % | Concrete 0–4 mm, plaster 0–2 mm, fill |
+| Marble | one 20ft container | 10,000 m² | 2–4 weeks | density 2.6–2.7, absorption ≤ 0.5 %, flexural ≥ 10 MPa | Galala, Sunny (Menia), blocks |
+| Clinker | 5,000 t (vessel) | 20,000 t | 2–3 weeks | C₃S ≥ 55 %, free lime ≤ 1.5 %, LOI ≤ 0.5 % | OPC, SRC, white |
+| Silica sand | 1 ton | 5,000 t | 1–2 weeks | SiO₂ ≥ 99 %, Fe₂O₃ ≤ 0.03 %, 0.1–0.6 mm | Glass, foundry, filtration |
 
-### Cement (Products → Cement)
-- [ ] Compressive strength (28-day): value in MPa + standard (e.g. EN 197-1)
-- [ ] Initial setting time: standard
-- [ ] Grades table: 3 rows (grade, description, typical use), e.g. CEM I 42.5N
-- [ ] Packaging: bulk loading method; FIBC quantity per container; bag weight (kg) and quantity per pallet or container
-- [ ] Certifications: 2 rows (certificate/standard + issuing body; whether a CoA/test report is available)
+Packaging rows: bulk; big bags of 1–1.5 t; 50 kg bags; about 24–25 t per 20ft container. For marble: slabs, tiles and blocks.
 
-### Sand, Marble, Clinker, White glassy silica sand (Products → each one): same list ×4
-- [ ] Key facts: minimum order, monthly capacity, lead time, packaging
-- [ ] Technical specifications: 3 rows (parameter, value, standard)
-- [ ] Grades table: 3 rows
-- [ ] Packaging: 3 rows (bulk / bags XX kg / big bags X t, with quantities)
-- [ ] Certifications: 2 rows
+## B. Written earlier (descriptive, no facts invented)
+Footer description, contact texts (no reply-time promise), company story, philosophy, vision, product short descriptions, overviews and applications.
 
-Tip: delete rows you don't need (the bin icon on each row) rather than leaving "[…]".
-
-## C. Images (all empty right now)
+## C. Images still empty
 
 | Slot | Where to upload | Count |
 |---|---|---|
+| ~~Founder portrait~~ | Done (in the draft) | – |
 | Home banner slides 2 and 3 (slide 1 already uses the port photo) | Website content → Company details & photos | 2 |
-| About section slideshow: facility, stockpiles, loading, inspection | Website content → Company details & photos (new) | 4 |
-| Founder portrait (tall photo) | Website content → Company details & photos (new) | 1 |
-| Product main photo: cement, sand, marble, clinker, silica sand | Products → each product → Photos | 5 |
+| About slideshow: facility, stockpiles, loading, inspection | Website content → Company details & photos | 4 |
+| Product main photo (cement, sand, marble, clinker, silica sand) | Products → each product → Photos | 5 |
 | Product gallery: packaging, stockyard, loading per product | Products → each product → Photos | 15 |
-| Product datasheets (PDF, optional) | Products → each product → Datasheet | 5 |
+| Product datasheets (PDF, optional; hidden while empty) | Products → each product → Datasheet | 5 |
 
-The grey boxes with captions like "Image — cement close-up" or "Photo — warehouse…" are these empty slots.
-The captions disappear once a photo is uploaded.
-The preview image for links shared on social media is generated automatically.
-
-## D. Already fine
-- Contact details (sales@nbsalma.com, phone, WhatsApp) are filled in
-- Privacy, terms and cookie pages are live in all 3 languages (have them reviewed legally)
-- No broken "#" links remain
+## D. Optional
+- LinkedIn / Facebook links (hidden while empty)
