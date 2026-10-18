@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, routing } from "@/i18n/routing";
 import { productImage, productSlugsOf, type ProductDetail } from "@/data/products";
 import { DEFAULT_CONTENT } from "@/lib/content";
-import { ArrowRight, Download } from "@/components/Icons";
+import { ArrowRight, Certificate, Download, ShieldCheck } from "@/components/Icons";
 
 export function generateStaticParams() {
   // Products added later in the dashboard render on first visit (dynamicParams).
@@ -178,9 +178,11 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
             <div id="certs" className="flex flex-col gap-[18px]">
               <h2 className={h2}>{t("certs")}</h2>
               <div className="grid grid-cols-[repeat(auto-fit,minmax(min(260px,100%),1fr))] gap-3">
-                {d.certs.map(([title, desc]) => (
-                  <div key={title} className="flex items-center gap-4 border border-dashed border-[#B5AFA4] p-[18px]">
-                    <span className="size-11 flex-none rounded-full border border-sand-2" />
+                {d.certs.map(([title, desc], i) => (
+                  <div key={title} className="flex items-center gap-4 border border-sand bg-paper-2 p-[18px]">
+                    <span className="flex size-11 flex-none items-center justify-center rounded-full bg-accent/10 text-accent">
+                      {i % 2 === 0 ? <Certificate /> : <ShieldCheck />}
+                    </span>
                     <span className="flex flex-col gap-1"><span className="text-[15px] font-semibold">{title}</span><span className="text-[13px] text-muted-2">{desc}</span></span>
                   </div>
                 ))}

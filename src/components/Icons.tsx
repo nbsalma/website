@@ -71,6 +71,24 @@ export function Close({ className = "", size = 20 }: P) {
     </svg>
   );
 }
+export function Certificate({ className = "", size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h5M14 3l5 5M14 3v5h5M19 8v3" />
+      <path d="M8 9h3M8 13h5M8 17h2" />
+      <circle cx="17" cy="16" r="3" />
+      <path d="M15.5 18.6 15 22l2-1 2 1-.5-3.4" />
+    </svg>
+  );
+}
+export function ShieldCheck({ className = "", size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.4 7.5 9.5 4.3-1.1 7.5-5 7.5-9.5V6L12 3Z" />
+      <path d="m8.8 12 2.2 2.2 4.2-4.4" />
+    </svg>
+  );
+}
 export function CropMarks() {
   const pos = ["-start-[9px] -top-[9px]", "-end-[9px] -top-[9px]", "-start-[9px] -bottom-[9px]", "-end-[9px] -bottom-[9px]"];
   return (
