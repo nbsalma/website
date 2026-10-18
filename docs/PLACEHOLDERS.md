@@ -33,16 +33,11 @@ Packaging rows: bulk; big bags of 1–1.5 t; 50 kg bags; about 24–25 t per 20f
 ## B. Written earlier (descriptive, no facts invented)
 Footer description, contact texts (no reply-time promise), company story, philosophy, vision, product short descriptions, overviews and applications.
 
-## C. Images still empty
-
-| Slot | Where to upload | Count |
-|---|---|---|
-| ~~Founder portrait~~ | Done (in the draft) | – |
-| Home banner slides 2 and 3 (slide 1 already uses the port photo) | Website content → Company details & photos | 2 |
-| About slideshow: facility, stockpiles, loading, inspection | Website content → Company details & photos | 4 |
-| Product main photo (cement, sand, marble, clinker, silica sand) | Products → each product → Photos | 5 |
-| Product gallery: packaging, stockyard, loading per product | Products → each product → Photos | 15 |
-| Product datasheets (PDF, optional; hidden while empty) | Products → each product → Datasheet | 5 |
+## C. Images (all filled, 18 Oct 2026)
+All 26 empty photo slots now use free stock photos (Unsplash License, CC0 or public domain; no credit needed).
+They are stored in `public/images/site/`, and `SOURCES.md` there lists the source of each one.
+Replace any of them with real company photos in the dashboard whenever you have them.
+Product datasheets (PDF) are still optional; the download button stays hidden until one is uploaded.
 
 ## D. Optional
 - LinkedIn / Facebook links (hidden while empty)
