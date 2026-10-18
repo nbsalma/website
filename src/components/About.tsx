@@ -6,7 +6,7 @@ export function AboutSection() {
   const facts = t.raw("facts") as { k: string; v: string }[];
   const slides = t.raw("slides") as { title: string; desc: string }[];
   const tones = ["#DDD9D1", "#D5D0C6", "#E0DCD4", "#D8D3CA"];
-  const images = useTranslations("shared").raw("images") as { about?: string[]; founder?: string };
+  const images = useTranslations("shared").raw("images") as { about?: string[] };
   const photos = images.about ?? [];
 
   return (
@@ -64,30 +64,6 @@ export function AboutSection() {
                 <p className="m-0 text-[15px] leading-relaxed text-muted">{t("vision")}</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap items-start gap-x-[clamp(40px,6vw,96px)] gap-y-10 border-t border-ink pt-[clamp(48px,6vw,72px)]">
-          <div className="flex min-w-0 flex-[0_1_320px] flex-col gap-4">
-            <div className="ph-light relative aspect-[4/5] w-full overflow-hidden">
-              {images.founder ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={images.founder} alt={t("founderName")} className="absolute inset-0 h-full w-full object-cover" />
-              ) : (
-                <span className="label-mono absolute inset-x-5 bottom-[18px] text-[#59554D]">{t("portrait")}</span>
-              )}
-            </div>
-            <div className="flex flex-col gap-1">
-              <span className="text-xl font-semibold [font-stretch:106%]">{t("founderName")}</span>
-              <span className="font-mono text-xs uppercase tracking-[0.08em] text-muted-2">{t("founderRole")}</span>
-            </div>
-          </div>
-          <div className="flex min-w-0 flex-[999_1_520px] flex-col gap-7">
-            <p className="eyebrow text-accent">{t("leadership")}</p>
-            <blockquote className="m-0">
-              <p className="m-0 text-[clamp(26px,3vw,42px)] leading-[1.18] font-medium tracking-[-0.02em] [font-stretch:104%] [text-wrap:balance]">{t("quote")}</p>
-            </blockquote>
-            <p className="m-0 max-w-[640px] text-base leading-[1.65] text-ink-2">{t("bio")}</p>
           </div>
         </div>
       </div>
