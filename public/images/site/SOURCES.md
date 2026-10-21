@@ -30,3 +30,4 @@ All free for commercial use without attribution (Unsplash License, CC0 or public
 | silica-sand-packaging.jpg | unsplash | Warehouse with stacks of white bags | https://unsplash.com/photos/1710141530542-f792450e736e |
 | silica-sand-stockyard.jpg | unsplash | Large pile of sand by a metal structure | https://unsplash.com/photos/1684067241390-32e697757ae7 |
 | silica-sand-loading.jpg | unsplash | Dump truck unloading rocks at a quarry | https://unsplash.com/photos/1760568787655-247d67618f37 |
+| cement-plant.jpg | provided by NB | Cement plant (current cement product photo, replaces cement-main.jpg) | supplied by the client, 21 Oct 2026 |
